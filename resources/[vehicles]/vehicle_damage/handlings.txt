@@ -1,0 +1,258 @@
+Jeep 4x4:
+
+setVehicleHandling(vehicle, "driveType", "awd")
+setVehicleHandling(vehicle, "tractionBias", 0.5)
+setVehicleHandling(vehicle, "suspensionForceLevel", 2.0)
+setVehicleHandling(vehicle, "suspensionDamping", 0.15)
+setVehicleHandling(vehicle, "suspensionHighSpeedDamping", 0.15)
+setVehicleHandling(vehicle, "suspensionUpperLimit", 0.3)
+setVehicleHandling(vehicle, "suspensionLowerLimit", -0.2)
+setVehicleHandling(vehicle, "tractionMultiplier", 1.5)
+setVehicleHandling(vehicle, "tractionLoss", 0.8)
+setVehicleHandling(vehicle, "brakeDeceleration", 6.0)
+setVehicleHandling(vehicle, "brakeBias", 0.5)
+setVehicleHandling(vehicle, "steeringLock", 35.0)
+setVehicleHandling(vehicle, "suspensionAntiDiveMultiplier", 0.5)
+
+--------------------------------------------------------------------------------------------------------
+
+Dodge charger srt hellcat:
+
+
+setVehicleHandling(vehicle, "mass", 2025) -- Masa del vehículo en kg
+setVehicleHandling(vehicle, "turnMass", 4500) -- Masa de giro
+setVehicleHandling(vehicle, "dragCoeff", 0.3) -- Coeficiente de arrastre
+setVehicleHandling(vehicle, "centerOfMass", {0, 0.0, -0.2}) -- Centro de masa
+
+-- Suspensión
+setVehicleHandling(vehicle, "suspensionForceLevel", 1.8) -- Nivel de fuerza de la suspensión
+setVehicleHandling(vehicle, "suspensionDamping", 0.12) -- Amortiguación de la suspensión
+setVehicleHandling(vehicle, "suspensionHighSpeedDamping", 0.0) -- Amortiguación a alta velocidad
+setVehicleHandling(vehicle, "suspensionUpperLimit", 0.1) -- Límite superior de la suspensión
+setVehicleHandling(vehicle, "suspensionLowerLimit", -0.15) -- Límite inferior de la suspensión
+setVehicleHandling(vehicle, "suspensionAntiDiveMultiplier", 0.3) -- Anti-inmersión de suspensión
+
+-- Tracción y manejo
+setVehicleHandling(vehicle, "tractionMultiplier", 1.1) -- Multiplicador de tracción
+setVehicleHandling(vehicle, "tractionLoss", 0.85) -- Pérdida de tracción
+setVehicleHandling(vehicle, "tractionBias", 0.48) -- Sesgo de tracción
+setVehicleHandling(vehicle, "steeringLock", 35.0) -- Ángulo de giro
+
+-- Motor y transmisión
+setVehicleHandling(vehicle, "driveType", "rwd") -- Tracción trasera
+setVehicleHandling(vehicle, "engineAcceleration", 15.0) -- Aceleración del motor ajustada para que le cueste más llegar a la velocidad máxima
+setVehicleHandling(vehicle, "engineInertia", 35.0) -- Inercia del motor aumentada para reducir la respuesta del acelerador
+setVehicleHandling(vehicle, "maxVelocity", 312.0) -- Velocidad máxima ajustada a 312 km/h
+
+-- Frenos
+setVehicleHandling(vehicle, "brakeDeceleration", 10.0) -- Desaceleración de frenos
+setVehicleHandling(vehicle, "brakeBias", 0.6) -- Sesgo de frenado
+
+-- Otros ajustes
+setVehicleHandling(vehicle, "numberOfGears", 5) -- Número de marchas
+
+--------------------------------------------------------------------------------------------------------
+
+Dodge Charger RT 1970
+
+setVehicleHandling(vehicle, "mass", 1800) -- Masa del vehículo en kg
+setVehicleHandling(vehicle, "turnMass", 4000) -- Masa de giro
+setVehicleHandling(vehicle, "dragCoeff", 0.35) -- Coeficiente de arrastre
+setVehicleHandling(vehicle, "centerOfMass", {0, 0.0, -0.2}) -- Centro de masa
+
+-- Suspensión
+setVehicleHandling(vehicle, "suspensionForceLevel", 1.5) -- Nivel de fuerza de la suspensión
+setVehicleHandling(vehicle, "suspensionDamping", 0.1) -- Amortiguación de la suspensión
+setVehicleHandling(vehicle, "suspensionHighSpeedDamping", 0.0) -- Amortiguación a alta velocidad
+setVehicleHandling(vehicle, "suspensionUpperLimit", 0.15) -- Límite superior de la suspensión
+setVehicleHandling(vehicle, "suspensionLowerLimit", -0.2) -- Límite inferior de la suspensión
+setVehicleHandling(vehicle, "suspensionAntiDiveMultiplier", 0.2) -- Anti-inmersión de suspensión
+
+-- Tracción y manejo
+setVehicleHandling(vehicle, "tractionMultiplier", 1.05) -- Multiplicador de tracción
+setVehicleHandling(vehicle, "tractionLoss", 0.85) -- Pérdida de tracción
+setVehicleHandling(vehicle, "tractionBias", 0.52) -- Sesgo de tracción hacia las ruedas traseras
+setVehicleHandling(vehicle, "steeringLock", 32.0) -- Ángulo de giro
+
+-- Motor y transmisión
+setVehicleHandling(vehicle, "driveType", "rwd") -- Tracción trasera
+setVehicleHandling(vehicle, "engineAcceleration", 12.0) -- Aceleración del motor ajustada para ser más realista
+setVehicleHandling(vehicle, "engineInertia", 40.0) -- Inercia del motor aumentada para reducir la respuesta del acelerador
+setVehicleHandling(vehicle, "maxVelocity", 312.0) -- Velocidad máxima ajustada a 312 km/h
+
+-- Frenos
+setVehicleHandling(vehicle, "brakeDeceleration", 8.0) -- Desaceleración de frenos
+setVehicleHandling(vehicle, "brakeBias", 0.65) -- Sesgo de frenado
+
+-- Otros ajustes
+setVehicleHandling(vehicle, "numberOfGears", 4) -- Número de marchas
+
+--------------------------------------------------------------------------------------------------------
+
+Subaru Impreza WRX STI
+
+setVehicleHandling(vehicle, "mass", 1500) -- Masa del vehículo en kg
+setVehicleHandling(vehicle, "turnMass", 3500) -- Masa de giro
+setVehicleHandling(vehicle, "dragCoeff", 0.32) -- Coeficiente de arrastre
+setVehicleHandling(vehicle, "centerOfMass", {0, 0.0, -0.2}) -- Centro de masa
+
+-- Suspensión
+setVehicleHandling(vehicle, "suspensionForceLevel", 1.8) -- Nivel de fuerza de la suspensión
+setVehicleHandling(vehicle, "suspensionDamping", 0.1) -- Amortiguación de la suspensión
+setVehicleHandling(vehicle, "suspensionHighSpeedDamping", 0.0) -- Amortiguación a alta velocidad
+setVehicleHandling(vehicle, "suspensionUpperLimit", 0.15) -- Límite superior de la suspensión
+setVehicleHandling(vehicle, "suspensionLowerLimit", -0.15) -- Límite inferior de la suspensión
+setVehicleHandling(vehicle, "suspensionAntiDiveMultiplier", 0.3) -- Anti-inmersión de suspensión
+
+-- Tracción y manejo
+setVehicleHandling(vehicle, "tractionMultiplier", 1.2) -- Multiplicador de tracción
+setVehicleHandling(vehicle, "tractionLoss", 0.85) -- Pérdida de tracción
+setVehicleHandling(vehicle, "tractionBias", 0.5) -- Sesgo de tracción equilibrado
+setVehicleHandling(vehicle, "steeringLock", 35.0) -- Ángulo de giro
+
+-- Motor y transmisión
+setVehicleHandling(vehicle, "driveType", "awd") -- Tracción en las cuatro ruedas
+setVehicleHandling(vehicle, "engineAcceleration", 12.0) -- Aceleración del motor ajustada para que le cueste más llegar a la velocidad máxima
+setVehicleHandling(vehicle, "engineInertia", 30.0) -- Inercia del motor aumentada
+setVehicleHandling(vehicle, "maxVelocity", 290.0) -- Velocidad máxima ajustada a 290 km/h
+
+-- Frenos
+setVehicleHandling(vehicle, "brakeDeceleration", 10.0) -- Desaceleración de frenos
+setVehicleHandling(vehicle, "brakeBias", 0.6) -- Sesgo de frenado
+
+--------------------------------------------------------------------------------------------------------
+
+Ford GT Classic
+
+setVehicleHandling(vehicle, "mass", 1540) -- Masa del vehículo en kg
+setVehicleHandling(vehicle, "turnMass", 3500) -- Masa de giro
+setVehicleHandling(vehicle, "dragCoeff", 0.35) -- Coeficiente de arrastre
+setVehicleHandling(vehicle, "centerOfMass", {0, -0.05, -0.15}) -- Centro de masa
+
+-- Suspensión
+setVehicleHandling(vehicle, "suspensionForceLevel", 1.6) -- Nivel de fuerza de la suspensión
+setVehicleHandling(vehicle, "suspensionDamping", 0.1) -- Amortiguación de la suspensión
+setVehicleHandling(vehicle, "suspensionHighSpeedDamping", 0.0) -- Amortiguación a alta velocidad
+setVehicleHandling(vehicle, "suspensionUpperLimit", 0.1) -- Límite superior de la suspensión
+setVehicleHandling(vehicle, "suspensionLowerLimit", -0.1) -- Límite inferior de la suspensión
+setVehicleHandling(vehicle, "suspensionAntiDiveMultiplier", 0.2) -- Anti-inmersión de suspensión
+
+-- Tracción y manejo
+setVehicleHandling(vehicle, "tractionMultiplier", 1.1) -- Multiplicador de tracción
+setVehicleHandling(vehicle, "tractionLoss", 0.8) -- Pérdida de tracción
+setVehicleHandling(vehicle, "tractionBias", 0.48) -- Sesgo de tracción
+setVehicleHandling(vehicle, "steeringLock", 32.0) -- Ángulo de giro
+
+-- Motor y transmisión
+setVehicleHandling(vehicle, "driveType", "rwd") -- Tracción trasera
+setVehicleHandling(vehicle, "engineAcceleration", 11.0) -- Aceleración del motor ajustada
+setVehicleHandling(vehicle, "engineInertia", 35.0) -- Inercia del motor
+setVehicleHandling(vehicle, "maxVelocity", 300.0) -- Velocidad máxima ajustada a 300 km/h
+
+-- Frenos
+setVehicleHandling(vehicle, "brakeDeceleration", 9.0) -- Desaceleración de frenos
+setVehicleHandling(vehicle, "brakeBias", 0.55) -- Sesgo de frenado
+
+--------------------------------------------------------------------------------------------------------
+
+Aston Martin Vantage S
+
+setVehicleHandling(vehicle, "mass", 1630) -- Masa del vehículo en kg
+setVehicleHandling(vehicle, "turnMass", 3000) -- Masa de giro
+setVehicleHandling(vehicle, "dragCoeff", 0.34) -- Coeficiente de arrastre
+setVehicleHandling(vehicle, "centerOfMass", {0, 0.0, -0.1}) -- Centro de masa
+
+-- Suspensión
+setVehicleHandling(vehicle, "suspensionForceLevel", 1.7) -- Nivel de fuerza de la suspensión
+setVehicleHandling(vehicle, "suspensionDamping", 0.15) -- Amortiguación de la suspensión
+setVehicleHandling(vehicle, "suspensionHighSpeedDamping", 0.0) -- Amortiguación a alta velocidad
+setVehicleHandling(vehicle, "suspensionUpperLimit", 0.1) -- Límite superior de la suspensión
+setVehicleHandling(vehicle, "suspensionLowerLimit", -0.1) -- Límite inferior de la suspensión
+setVehicleHandling(vehicle, "suspensionAntiDiveMultiplier", 0.2) -- Anti-inmersión de suspensión
+
+-- Tracción y manejo
+setVehicleHandling(vehicle, "tractionMultiplier", 1.1) -- Multiplicador de tracción
+setVehicleHandling(vehicle, "tractionLoss", 0.8) -- Pérdida de tracción
+setVehicleHandling(vehicle, "tractionBias", 0.52) -- Sesgo de tracción
+setVehicleHandling(vehicle, "steeringLock", 32.0) -- Ángulo de giro
+
+-- Motor y transmisión
+setVehicleHandling(vehicle, "driveType", "rwd") -- Tracción trasera
+setVehicleHandling(vehicle, "engineAcceleration", 10.5) -- Aceleración del motor ajustada
+setVehicleHandling(vehicle, "engineInertia", 35.0) -- Inercia del motor
+setVehicleHandling(vehicle, "maxVelocity", 300.0) -- Velocidad máxima ajustada a 300 km/h
+
+-- Frenos
+setVehicleHandling(vehicle, "brakeDeceleration", 9.5) -- Desaceleración de frenos
+setVehicleHandling(vehicle, "brakeBias", 0.55) -- Sesgo de frenado
+
+--------------------------------------------------------------------------------------------------------
+
+Ford F-150 Raptor
+
+setVehicleHandling(vehicle, "mass", 3000) -- Masa del vehículo en kg
+setVehicleHandling(vehicle, "turnMass", 5000) -- Masa de giro
+setVehicleHandling(vehicle, "dragCoeff", 0.45) -- Coeficiente de arrastre
+setVehicleHandling(vehicle, "centerOfMass", {0, 0.0, -0.4}) -- Centro de masa
+
+-- Suspensión
+setVehicleHandling(vehicle, "suspensionForceLevel", 2.0) -- Nivel de fuerza de la suspensión
+setVehicleHandling(vehicle, "suspensionDamping", 0.2) -- Amortiguación de la suspensión
+setVehicleHandling(vehicle, "suspensionHighSpeedDamping", 0.0) -- Amortiguación a alta velocidad
+setVehicleHandling(vehicle, "suspensionUpperLimit", 0.2) -- Límite superior de la suspensión
+setVehicleHandling(vehicle, "suspensionLowerLimit", -0.3) -- Límite inferior de la suspensión
+setVehicleHandling(vehicle, "suspensionAntiDiveMultiplier", 0.3) -- Anti-inmersión de suspensión
+
+-- Tracción y manejo
+setVehicleHandling(vehicle, "tractionMultiplier", 1.2) -- Multiplicador de tracción
+setVehicleHandling(vehicle, "tractionLoss", 0.7) -- Pérdida de tracción
+setVehicleHandling(vehicle, "tractionBias", 0.52) -- Sesgo de tracción
+setVehicleHandling(vehicle, "steeringLock", 30.0) -- Ángulo de giro
+
+-- Motor y transmisión
+setVehicleHandling(vehicle, "driveType", "awd") -- Tracción en las cuatro ruedas
+setVehicleHandling(vehicle, "engineAcceleration", 9.0) -- Aceleración del motor ajustada
+setVehicleHandling(vehicle, "engineInertia", 40.0) -- Inercia del motor
+setVehicleHandling(vehicle, "maxVelocity", 220.0) -- Velocidad máxima ajustada a 220 km/h
+
+-- Frenos
+setVehicleHandling(vehicle, "brakeDeceleration", 8.0) -- Desaceleración de frenos
+setVehicleHandling(vehicle, "brakeBias", 0.55) -- Sesgo de frenado
+
+--------------------------------------------------------------------------------------------------------
+
+Porsche 911s
+
+setVehicleHandling(vehicle, "mass", 1400) -- Masa del vehículo en kg
+setVehicleHandling(vehicle, "turnMass", 2500) -- Masa de giro
+setVehicleHandling(vehicle, "dragCoeff", 0.32) -- Coeficiente de arrastre
+setVehicleHandling(vehicle, "centerOfMass", {0, 0.0, -0.2}) -- Centro de masa
+
+-- Suspensión
+setVehicleHandling(vehicle, "suspensionForceLevel", 1.8) -- Nivel de fuerza de la suspensión
+setVehicleHandling(vehicle, "suspensionDamping", 0.2) -- Amortiguación de la suspensión
+setVehicleHandling(vehicle, "suspensionHighSpeedDamping", 0.1) -- Amortiguación a alta velocidad
+setVehicleHandling(vehicle, "suspensionUpperLimit", 0.1) -- Límite superior de la suspensión
+setVehicleHandling(vehicle, "suspensionLowerLimit", -0.1) -- Límite inferior de la suspensión
+setVehicleHandling(vehicle, "suspensionAntiDiveMultiplier", 0.2) -- Anti-inmersión de suspensión
+
+-- Tracción y manejo
+setVehicleHandling(vehicle, "tractionMultiplier", 1.1) -- Multiplicador de tracción
+setVehicleHandling(vehicle, "tractionLoss", 0.8) -- Pérdida de tracción
+setVehicleHandling(vehicle, "tractionBias", 0.52) -- Sesgo de tracción
+setVehicleHandling(vehicle, "steeringLock", 32.0) -- Ángulo de giro
+
+-- Motor y transmisión
+setVehicleHandling(vehicle, "driveType", "rwd") -- Tracción trasera
+setVehicleHandling(vehicle, "engineAcceleration", 10.0) -- Aceleración del motor ajustada
+setVehicleHandling(vehicle, "engineInertia", 35.0) -- Inercia del motor
+setVehicleHandling(vehicle, "maxVelocity", 280.0) -- Velocidad máxima ajustada a 280 km/h
+
+-- Frenos
+setVehicleHandling(vehicle, "brakeDeceleration", 9.0) -- Desaceleración de frenos
+setVehicleHandling(vehicle, "brakeBias", 0.55) -- Sesgo de frenado
+
+--------------------------------------------------------------------------------------------------------
+
+Audi S4 B8
+

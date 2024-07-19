@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<meta>
+     <info author="SherlocK" type="misc" name="Recuo" description="Recuo" />
+     <script src="script.lua" type="client" />
+</meta>

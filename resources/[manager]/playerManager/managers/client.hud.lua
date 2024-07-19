@@ -1,0 +1,4 @@
+-- addEvent("player::initHud", true)
+-- addEventHandler("player::initHud", root, function()
+--     exports.hud_player:drawHud()
+-- end)

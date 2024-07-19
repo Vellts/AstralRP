@@ -1,0 +1,24 @@
+<meta>
+    <script src="server.lua" type="server" />
+    <script src="configUpdates.lua" type="client" />
+    <!-- <script src="client.lua" type="client" /> -->
+
+    <script src="client/login.lua" type="client" />
+    <script src="client/register.lua" type="client" />
+    <script src="client/updates.lua" type="client" />
+    <script src="client/xml.lua" type="client" />
+    <script src="client/main.lua" type="client" />
+    <script src="utils/animation.lua" type="client" />
+    <script src="utils/table.lua" type="shared" />
+
+    <file src="assets/wallpaper.jpg" />
+    <file src="assets/logo.png" />
+    <file src="assets/user.png" />
+    <file src="assets/lock.png" />
+    <file src="assets/eyeOn.png" />
+    <file src="assets/eyeOff.png" />
+    <file src="assets/email.png" />
+    <file src="assets/arrow.png" />
+    <file src="assets/fonts/Poppins-Bold.ttf" />
+
+</meta>

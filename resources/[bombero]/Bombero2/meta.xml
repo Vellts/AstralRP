@@ -1,0 +1,24 @@
+<meta>
+    <!-- SERVER -->
+    <script src="server/server.marker.lua" type="server" />
+    <script src="server/server.fires.lua" type="server" />
+    <script src="server/server.test.lua" type="server" />
+    <script src="server/server.players.lua" type="server" />
+    <script src="server/server.vehicle.lua" type="server" />
+    <!-- CLIENT -->
+    <script src="client/client.gui.lua" type="client" />
+    <script src="client/client.dx.lua" type="client" />
+    <script src="client/client.fires.lua" type="client" />
+    <script src="client/client.test.lua" type="client" />
+    <script src="client/client.vehicle.lua" type="client" />
+    <!-- UTILS -->
+    <script src="utils/utils.table.lua" type="shared" />
+    <script src="utils/utils.elements.lua" type="shared" />
+    <script src="config.lua" type="shared" />
+    <!-- ASSETS -->
+    <file src="assets/bg.png" />
+    <file src="assets/Poppins-Medium.ttf" />
+    <file src="assets/Poppins-SemiBold.ttf" />
+    <file src="assets/alarm.wav" />
+    <file src="assets/click.wav" />
+</meta>

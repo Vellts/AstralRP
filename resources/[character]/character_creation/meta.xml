@@ -1,0 +1,19 @@
+<meta>
+    <script src="camera.lua" type="client" />
+    <script src="util.lua" type="shared" />
+    <script src="config.lua" type="shared" />
+    <script src="client/selection.character.lua" type="client" />
+    <script src="client/creation.character.lua" type="client" />
+    <script src="client/main.character.lua" type="client" />
+    <script src="server/server.lua" type="server" />
+
+    <file src="assets/Poppins-Bold.ttf" />
+    <file src="assets/coin.png" />
+    <file src="assets/user.png" />
+    <file src="assets/user_create.png" />
+    <file src="assets/circle.png" />
+    <file src="assets/female.png" />
+    <file src="assets/male.png" />
+
+    <export function="selectCharacter" />
+</meta>

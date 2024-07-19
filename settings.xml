@@ -1,0 +1,14 @@
+<settings>
+    <setting name="*dgs.metaBackup" value="[true]"></setting>
+    <setting name="*dgs.updateCheckNoticeInterval" value="[120]"></setting>
+    <setting name="*dgs.debugging" value="[true]"></setting>
+    <setting name="*dgs.updateCheck" value="[true]"></setting>
+    <setting name="*dgs.G2DCMD" value="[true]"></setting>
+    <setting name="*dgs.CMD" value="[true]"></setting>
+    <setting name="*dgs.metaStyleBackup" value="[true]"></setting>
+    <setting name="*dgs.updater" value="[true]"></setting>
+    <setting name="*dgs.compatibilityChecks" value="[true]"></setting>
+    <setting name="*dgs.updateCommand" value='[&quot;updatedgs&quot;]'></setting>
+    <setting name="*dgs.testFile" value="[true]"></setting>
+    <setting name="*dgs.updateCheckInterval" value="[120]"></setting>
+</settings>

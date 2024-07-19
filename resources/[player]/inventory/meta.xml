@@ -1,0 +1,26 @@
+<meta>
+    <!-- UTIL -->
+    <script src="items.lua" type="shared" />
+    <!-- CLIENT -->
+    <script src="client/items.lua" type="client"/>
+    <script src="client/menu.lua" type="client"/>
+    <script src="client/wearable.lua" type="client"/>
+    <!-- ASSETS -->
+    <file src="assets/sounds/menu_sound.mp3" />
+    <file src="assets/sounds/menu_sound_2.mp3" />
+    <file src="assets/images/bg.png" />
+    <file src="assets/images/character_male.png" />
+    <file src="assets/icons/weight.png" />
+    <file src="assets/icons/backpack.png" />
+    <file src="assets/icons/glasses.png" />
+    <file src="assets/icons/hat.png" />
+    <file src="assets/icons/mask.png" />
+    <file src="assets/icons/pants.png" />
+    <file src="assets/icons/shirt.png" />
+    <file src="assets/icons/shoes.png" />
+    <file src="assets/icons/watch.png" />
+    <!-- ITEMS -->
+    <file src="assets/icons/item_id_card.png" />
+    <file src="assets/icons/item_pill.png" />
+    <file src="assets/icons/item_hamburguer.png" />
+</meta>

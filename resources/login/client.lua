@@ -1,0 +1,38 @@
+-- local dgs = exports.dgs
+-- local data = {}
+
+-- addEventHandler("onClientResourceStart", root, function()
+--     -- create two editboxes, one for the username and one for the password and a button to submit the form
+--     data.usernameEdit = dgs:dgsCreateEdit(0.4, 0.4, 0.2, 0.05, "pepito", true)
+--     data.passwordEdit = dgs:dgsCreateEdit(0.4, 0.5, 0.2, 0.05, "1234", true)
+--     data.submitButton = dgs:dgsCreateButton(0.4, 0.6, 0.2, 0.05, "Submit", true)
+--     addEventHandler("onDgsMouseClickDown", data.submitButton, function()
+--         local username = dgs:dgsGetText(data.usernameEdit)
+--         local password = dgs:dgsGetText(data.passwordEdit)
+--         triggerServerEvent("player::loginRequest", localPlayer, username, password)
+--         -- return
+--     end, false)
+--     showCursor(true)
+-- end)
+
+-- addEvent("player::loginResponse", true)
+-- addEventHandler("player::loginResponse", root, function(success, message)
+--     if success then
+--         iprint("You have been successfully logged in!")
+--         if (isElement(data.usernameEdit)) then
+--             destroyElement(data.usernameEdit)
+--             data.usernameEdit = nil
+--         end
+--         if (isElement(data.passwordEdit)) then
+--             destroyElement(data.passwordEdit)
+--             data.passwordEdit = nil
+--         end
+--         if (isElement(data.submitButton)) then
+--             destroyElement(data.submitButton)
+--             data.submitButton = nil
+--         end
+--         showCursor(false)
+--     else
+--         iprint("Login failed: " .. message)
+--     end
+-- end)

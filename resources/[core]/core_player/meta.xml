@@ -1,0 +1,73 @@
+<meta>
+    <!--  SCRIPS  -->
+
+    <script src="hud.lua" type="client"></script>
+    <script src="server.lua" type="server"></script>
+    <script src="player.lua" type="client"></script>
+    <script src="fps.lua" type="client"></script>
+    <script src="weapons.lua" type="client"></script>
+    <script src="test.lua" type="client"></script>
+    <script src="utils.lua" type="shared"></script>
+    <script src="exports.lua" type="shared"></script>
+
+    <!--  EXPORTS  -->
+
+    <export function="updateBadge" type="client" />
+    <export function="drawHud" type="shared" />
+    <export function="drawMicrophone" type="client" />
+    <export function="drawHealth" type="client" />
+    <export function="drawArmor" type="client" />
+    <export function="drawHunger" type="client" />
+    <export function="drawThirst" type="client" />
+    <export function="drawName" type="client" />
+
+
+    <!--  FONTS  -->
+
+    <file src="assets/fonts/Poppins-Medium.ttf" />
+    <file src="assets/fonts/Poppins-SemIBold.ttf" />
+
+    <!--  IMAGES  -->
+
+    <file src="assets/images/mic_off.png" />
+    <file src="assets/images/mic_on.png" />
+    <file src="assets/images/health.png" />
+    <file src="assets/images/armor.png" />
+    <file src="assets/images/hunger.png" />
+    <file src="assets/images/drink.png" />
+    <file src="assets/images/developer.png" />
+
+    <!--  WEAPONS  -->
+
+    <file src="assets/images/weapons/fist.png" />
+    <file src="assets/images/weapons/bat.png" />
+    <file src="assets/images/weapons/brassknuckle.png" />
+    <file src="assets/images/weapons/colt45.png" />
+    <file src="assets/images/weapons/golfclub.png" />
+    <file src="assets/images/weapons/knife.png" />
+    <file src="assets/images/weapons/nightstick.png" />
+    <file src="assets/images/weapons/poolstick.png" />
+    <file src="assets/images/weapons/silenced.png" />
+    <file src="assets/images/weapons/deagle.png" />
+    <file src="assets/images/weapons/shotgun.png" />
+    <file src="assets/images/weapons/sawedoff.png" />
+    <file src="assets/images/weapons/combatshotgun.png" />
+    <file src="assets/images/weapons/uzi.png" />
+    <file src="assets/images/weapons/tec9.png" />
+    <file src="assets/images/weapons/mp5.png" />
+    <file src="assets/images/weapons/ak47.png" />
+    <file src="assets/images/weapons/m4.png" />
+    <file src="assets/images/weapons/rifle.png" />
+    <file src="assets/images/weapons/sniper.png" />
+    <file src="assets/images/weapons/grenade.png" />
+    <file src="assets/images/weapons/teargas.png" />
+    <file src="assets/images/weapons/molotov.png" />
+    <file src="assets/images/weapons/katana.png" />
+    <file src="assets/images/weapons/satchel.png" />
+    <file src="assets/images/weapons/spraycan.png" />
+    <file src="assets/images/weapons/fireextinguisher.png" />
+    <file src="assets/images/weapons/cane.png" />
+    <file src="assets/images/weapons/parachute.png" />
+
+
+</meta>

@@ -1,0 +1,12 @@
+<meta>
+    <script src="client.lua" type="client" />
+    <script src="server.lua" type="server" />
+    <script src="commands.lua" type="shared" cache="false" />
+    <script src="util.lua" type="shared" />
+
+    <file src="assets/Poppins-Bold.ttf" />
+    <file src="assets/send.png" />
+    <file src="assets/eye.png" />
+    <file src="assets/config.png" />
+    <min_mta_version server="1.6.0" />
+</meta> 

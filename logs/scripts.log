@@ -1,0 +1,269 @@
+[2023-12-12 18:22:53] [DGS Config] Config file was created.
+[2023-12-12 18:22:53] [DGS Config] G2D command line is enabled.
+[2023-12-13 12:04:43] [DGS Config] Invalid config file.
+[2023-12-13 12:04:43] [DGS Config] The config file has been updated.
+[2023-12-13 12:04:43] [DGS Config] G2D command line is enabled.
+[2023-12-13 18:40:31] [DGS Config] Invalid config file.
+[2023-12-13 18:40:31] [DGS Config] The config file has been updated.
+[2023-12-13 18:40:31] [DGS Config] G2D command line is enabled.
+[2023-12-14 16:40:11] [DGS Config] Invalid config file.
+[2023-12-14 16:40:11] [DGS Config] The config file has been updated.
+[2023-12-14 16:40:11] [DGS Config] G2D command line is enabled.
+[2024-01-29 10:57:17] [DGS Config] Invalid config file.
+[2024-01-29 10:57:17] [DGS Config] The config file has been updated.
+[2024-01-29 10:57:17] [DGS Config] G2D command line is enabled.
+[2024-02-01 15:10:10] [DGS Config] Invalid config file.
+[2024-02-01 15:10:10] [DGS Config] The config file has been updated.
+[2024-02-01 15:10:10] [DGS Config] G2D command line is enabled.
+[2024-02-02 12:08:31] [DGS Config] Invalid config file.
+[2024-02-02 12:08:31] [DGS Config] The config file has been updated.
+[2024-02-02 12:08:31] [DGS Config] G2D command line is enabled.
+[2024-02-02 18:27:35] [DGS Config] Invalid config file.
+[2024-02-02 18:27:35] [DGS Config] The config file has been updated.
+[2024-02-02 18:27:35] [DGS Config] G2D command line is enabled.
+[2024-02-05 17:40:36] [DGS Config] Invalid config file.
+[2024-02-05 17:40:36] [DGS Config] The config file has been updated.
+[2024-02-05 17:40:36] [DGS Config] G2D command line is enabled.
+[2024-02-07 11:47:33] [DGS Config] Invalid config file.
+[2024-02-07 11:47:33] [DGS Config] The config file has been updated.
+[2024-02-07 11:47:33] [DGS Config] G2D command line is enabled.
+[2024-02-09 12:35:29] [DGS Config] Invalid config file.
+[2024-02-09 12:35:29] [DGS Config] The config file has been updated.
+[2024-02-09 12:35:29] [DGS Config] G2D command line is enabled.
+[2024-02-09 18:45:49] [DGS Config] Invalid config file.
+[2024-02-09 18:45:49] [DGS Config] The config file has been updated.
+[2024-02-09 18:45:49] [DGS Config] G2D command line is enabled.
+[2024-02-11 20:25:18] [DGS Config] Invalid config file.
+[2024-02-11 20:25:18] [DGS Config] The config file has been updated.
+[2024-02-11 20:25:18] [DGS Config] G2D command line is enabled.
+[2024-02-12 12:34:59] [DGS Config] Invalid config file.
+[2024-02-12 12:34:59] [DGS Config] The config file has been updated.
+[2024-02-12 12:34:59] [DGS Config] G2D command line is enabled.
+[2024-02-20 12:18:45] [DGS Config] Invalid config file.
+[2024-02-20 12:18:45] [DGS Config] The config file has been updated.
+[2024-02-20 12:18:45] [DGS Config] G2D command line is enabled.
+[2024-02-21 18:44:53] [DGS Config] Invalid config file.
+[2024-02-21 18:44:53] [DGS Config] The config file has been updated.
+[2024-02-21 18:44:53] [DGS Config] G2D command line is enabled.
+[2024-02-23 20:38:19] [DGS Config] Invalid config file.
+[2024-02-23 20:38:19] [DGS Config] The config file has been updated.
+[2024-02-23 20:38:19] [DGS Config] G2D command line is enabled.
+[2024-02-26 11:55:27] [DGS Config] Invalid config file.
+[2024-02-26 11:55:27] [DGS Config] The config file has been updated.
+[2024-02-26 11:55:27] [DGS Config] G2D command line is enabled.
+[2024-02-26 12:29:23] [DGS Updater] Seetta attempt to update dgs (Allowed)
+[2024-02-26 12:29:23] [DGS Updater] Preparing to update dgs
+[2024-02-26 12:29:23] [DGS] Checking for updates..
+[2024-02-26 12:29:23] [DGS 2] fetchRemote' was called, but access was denied. To resolve this issue, use the command 'aclrequest allow dgs all'.
+[2024-02-26 12:29:37] [DGS Updater] Seetta attempt to update dgs (Allowed)
+[2024-02-26 12:29:37] [DGS Updater] Preparing to update dgs
+[2024-02-26 12:29:37] [DGS] Checking for updates..
+[2024-02-26 12:29:37] [DGS Updater] Requesting update data (From GitHub)...
+[2024-02-26 12:29:38] [DGS Updater] Update data retrieved successfully.
+[2024-02-26 12:29:38] [DGS Updater] Requesting verification data...
+[2024-02-26 12:29:41] [DGS Updater] Update required: (server.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (utility.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (manager.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (styleManager/styleManager.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (functions.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/3dtext.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/button.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/checkbox.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/combobox.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/customRenderer.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/edit.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/effectview.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/detectarea.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/gridlist.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/label.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/memo.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/menu.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/progressbar.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/radiobutton.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/tabpanel.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/scrollbar.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/scrollpane.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/scalepane.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/selector.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/switchbutton.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/window.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (Core/customCursor.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (client.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (dgsExportedFunction.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (animation.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/media.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/objPrevSupport.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/cmd.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/BasicShape/roundedRectangle.fx)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/BasicShape/roundedRectangle.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/BasicShape/circle.fx)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/BasicShape/circle.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/QRCode.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/Gradient/gradient.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/Gradient/gradient.fx)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/NineSlice/nineSlice.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/NineSlice/nineSlice.fx)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/BlurBox/blurBox.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (plugin/BlurBox/blurBox.fx)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (update.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (G2DManager_s.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (test.lua)
+[2024-02-26 12:29:41] [DGS Updater] Update required: (classlib.lua)
+[2024-02-26 12:29:41] [DGS Updater] Requesting (1/48): server.lua
+[2024-02-26 12:29:41] [DGS Updater] Got (1/48): server.lua [ 5364B -> 5011B ]
+[2024-02-26 12:29:41] [DGS Updater] Requesting (2/48): utility.lua
+[2024-02-26 12:29:42] [DGS Updater] Got (2/48): utility.lua [ 46956B -> 38752B ]
+[2024-02-26 12:29:42] [DGS Updater] Requesting (3/48): manager.lua
+[2024-02-26 12:29:42] [DGS Updater] Got (3/48): manager.lua [ 39393B -> 32244B ]
+[2024-02-26 12:29:42] [DGS Updater] Requesting (4/48): styleManager/styleManager.lua
+[2024-02-26 12:29:42] [DGS Updater] Got (4/48): styleManager/styleManager.lua [ 15603B -> 16667B ]
+[2024-02-26 12:29:42] [DGS Updater] Requesting (5/48): functions.lua
+[2024-02-26 12:29:42] [DGS Updater] Got (5/48): functions.lua [ 49842B -> 51497B ]
+[2024-02-26 12:29:42] [DGS Updater] Requesting (6/48): Core/3dtext.lua
+[2024-02-26 12:29:43] [DGS Updater] Got (6/48): Core/3dtext.lua [ 11441B -> 11453B ]
+[2024-02-26 12:29:43] [DGS Updater] Requesting (7/48): Core/button.lua
+[2024-02-26 12:29:43] [DGS Updater] Got (7/48): Core/button.lua [ 18665B -> 19301B ]
+[2024-02-26 12:29:43] [DGS Updater] Requesting (8/48): Core/checkbox.lua
+[2024-02-26 12:29:43] [DGS Updater] Got (8/48): Core/checkbox.lua [ 18767B -> 18834B ]
+[2024-02-26 12:29:43] [DGS Updater] Requesting (9/48): Core/combobox.lua
+[2024-02-26 12:29:43] [DGS Updater] Got (9/48): Core/combobox.lua [ 50814B -> 52855B ]
+[2024-02-26 12:29:43] [DGS Updater] Requesting (10/48): Core/customRenderer.lua
+[2024-02-26 12:29:43] [DGS Updater] Got (10/48): Core/customRenderer.lua [ 5366B -> 5346B ]
+[2024-02-26 12:29:43] [DGS Updater] Requesting (11/48): Core/edit.lua
+[2024-02-26 12:29:44] [DGS Updater] Got (11/48): Core/edit.lua [ 54248B -> 56145B ]
+[2024-02-26 12:29:44] [DGS Updater] Requesting (12/48): Core/effectview.lua
+[2024-02-26 12:29:44] [DGS Updater] Got (12/48): Core/effectview.lua [ 0B -> 6477B ]
+[2024-02-26 12:29:44] [DGS Updater] Requesting (13/48): Core/detectarea.lua
+[2024-02-26 12:29:44] [DGS Updater] Got (13/48): Core/detectarea.lua [ 7049B -> 7044B ]
+[2024-02-26 12:29:44] [DGS Updater] Requesting (14/48): Core/gridlist.lua
+[2024-02-26 12:29:44] [DGS Updater] Got (14/48): Core/gridlist.lua [ 137565B -> 137968B ]
+[2024-02-26 12:29:44] [DGS Updater] Requesting (15/48): Core/label.lua
+[2024-02-26 12:29:45] [DGS Updater] Got (15/48): Core/label.lua [ 9079B -> 9569B ]
+[2024-02-26 12:29:45] [DGS Updater] Requesting (16/48): Core/memo.lua
+[2024-02-26 12:29:45] [DGS Updater] Got (16/48): Core/memo.lua [ 82056B -> 83043B ]
+[2024-02-26 12:29:45] [DGS Updater] Requesting (17/48): Core/menu.lua
+[2024-02-26 12:29:45] [DGS Updater] Got (17/48): Core/menu.lua [ 19785B -> 19881B ]
+[2024-02-26 12:29:45] [DGS Updater] Requesting (18/48): Core/progressbar.lua
+[2024-02-26 12:29:45] [DGS Updater] Got (18/48): Core/progressbar.lua [ 23742B -> 23754B ]
+[2024-02-26 12:29:45] [DGS Updater] Requesting (19/48): Core/radiobutton.lua
+[2024-02-26 12:29:45] [DGS Updater] Got (19/48): Core/radiobutton.lua [ 17438B -> 17510B ]
+[2024-02-26 12:29:45] [DGS Updater] Requesting (20/48): Core/tabpanel.lua
+[2024-02-26 12:29:46] [DGS Updater] Got (20/48): Core/tabpanel.lua [ 30530B -> 30323B ]
+[2024-02-26 12:29:46] [DGS Updater] Requesting (21/48): Core/scrollbar.lua
+[2024-02-26 12:29:46] [DGS Updater] Got (21/48): Core/scrollbar.lua [ 29078B -> 29157B ]
+[2024-02-26 12:29:46] [DGS Updater] Requesting (22/48): Core/scrollpane.lua
+[2024-02-26 12:29:46] [DGS Updater] Got (22/48): Core/scrollpane.lua [ 26521B -> 26981B ]
+[2024-02-26 12:29:46] [DGS Updater] Requesting (23/48): Core/scalepane.lua
+[2024-02-26 12:29:46] [DGS Updater] Got (23/48): Core/scalepane.lua [ 21126B -> 21582B ]
+[2024-02-26 12:29:46] [DGS Updater] Requesting (24/48): Core/selector.lua
+[2024-02-26 12:29:47] [DGS Updater] Got (24/48): Core/selector.lua [ 25189B -> 26696B ]
+[2024-02-26 12:29:47] [DGS Updater] Requesting (25/48): Core/switchbutton.lua
+[2024-02-26 12:29:47] [DGS Updater] Got (25/48): Core/switchbutton.lua [ 20023B -> 19938B ]
+[2024-02-26 12:29:47] [DGS Updater] Requesting (26/48): Core/window.lua
+[2024-02-26 12:29:47] [DGS Updater] Got (26/48): Core/window.lua [ 16325B -> 16684B ]
+[2024-02-26 12:29:47] [DGS Updater] Requesting (27/48): Core/customCursor.lua
+[2024-02-26 12:29:47] [DGS Updater] Got (27/48): Core/customCursor.lua [ 2422B -> 2439B ]
+[2024-02-26 12:29:47] [DGS Updater] Requesting (28/48): client.lua
+[2024-02-26 12:29:48] [DGS Updater] Got (28/48): client.lua [ 82962B -> 83906B ]
+[2024-02-26 12:29:48] [DGS Updater] Requesting (29/48): dgsExportedFunction.lua
+[2024-02-26 12:29:48] [DGS Updater] Got (29/48): dgsExportedFunction.lua [ 25156B -> 24024B ]
+[2024-02-26 12:29:48] [DGS Updater] Requesting (30/48): animation.lua
+[2024-02-26 12:29:48] [DGS Updater] Got (30/48): animation.lua [ 15220B -> 15452B ]
+[2024-02-26 12:29:48] [DGS Updater] Requesting (31/48): plugin/media.lua
+[2024-02-26 12:29:48] [DGS Updater] Got (31/48): plugin/media.lua [ 12533B -> 12515B ]
+[2024-02-26 12:29:48] [DGS Updater] Requesting (32/48): plugin/objPrevSupport.lua
+[2024-02-26 12:29:48] [DGS Updater] Got (32/48): plugin/objPrevSupport.lua [ 6173B -> 6164B ]
+[2024-02-26 12:29:48] [DGS Updater] Requesting (33/48): plugin/cmd.lua
+[2024-02-26 12:29:49] [DGS Updater] Got (33/48): plugin/cmd.lua [ 27511B -> 27462B ]
+[2024-02-26 12:29:49] [DGS Updater] Requesting (34/48): plugin/BasicShape/roundedRectangle.fx
+[2024-02-26 12:29:49] [DGS Updater] Got (34/48): plugin/BasicShape/roundedRectangle.fx [ 7101B -> 7061B ]
+[2024-02-26 12:29:49] [DGS Updater] Requesting (35/48): plugin/BasicShape/roundedRectangle.lua
+[2024-02-26 12:29:49] [DGS Updater] Got (35/48): plugin/BasicShape/roundedRectangle.lua [ 7765B -> 7752B ]
+[2024-02-26 12:29:49] [DGS Updater] Requesting (36/48): plugin/BasicShape/circle.fx
+[2024-02-26 12:29:49] [DGS Updater] Got (36/48): plugin/BasicShape/circle.fx [ 3978B -> 3931B ]
+[2024-02-26 12:29:49] [DGS Updater] Requesting (37/48): plugin/BasicShape/circle.lua
+[2024-02-26 12:29:50] [DGS Updater] Got (37/48): plugin/BasicShape/circle.lua [ 6800B -> 6795B ]
+[2024-02-26 12:29:50] [DGS Updater] Requesting (38/48): plugin/QRCode.lua
+[2024-02-26 12:29:50] [DGS Updater] Got (38/48): plugin/QRCode.lua [ 1195B -> 1175B ]
+[2024-02-26 12:29:50] [DGS Updater] Requesting (39/48): plugin/Gradient/gradient.lua
+[2024-02-26 12:29:50] [DGS Updater] Got (39/48): plugin/Gradient/gradient.lua [ 3844B -> 3849B ]
+[2024-02-26 12:29:50] [DGS Updater] Requesting (40/48): plugin/Gradient/gradient.fx
+[2024-02-26 12:29:50] [DGS Updater] Got (40/48): plugin/Gradient/gradient.fx [ 1070B -> 1024B ]
+[2024-02-26 12:29:50] [DGS Updater] Requesting (41/48): plugin/NineSlice/nineSlice.lua
+[2024-02-26 12:29:50] [DGS Updater] Got (41/48): plugin/NineSlice/nineSlice.lua [ 0B -> 4713B ]
+[2024-02-26 12:29:50] [DGS Updater] Requesting (42/48): plugin/NineSlice/nineSlice.fx
+[2024-02-26 12:29:51] [DGS Updater] Got (42/48): plugin/NineSlice/nineSlice.fx [ 0B -> 1454B ]
+[2024-02-26 12:29:51] [DGS Updater] Requesting (43/48): plugin/BlurBox/blurBox.lua
+[2024-02-26 12:29:51] [DGS Updater] Got (43/48): plugin/BlurBox/blurBox.lua [ 0B -> 8199B ]
+[2024-02-26 12:29:51] [DGS Updater] Requesting (44/48): plugin/BlurBox/blurBox.fx
+[2024-02-26 12:29:51] [DGS Updater] Got (44/48): plugin/BlurBox/blurBox.fx [ 0B -> 917B ]
+[2024-02-26 12:29:51] [DGS Updater] Requesting (45/48): update.lua
+[2024-02-26 12:29:51] [DGS Updater] Got (45/48): update.lua [ 9996B -> 9485B ]
+[2024-02-26 12:29:51] [DGS Updater] Requesting (46/48): G2DManager_s.lua
+[2024-02-26 12:29:52] [DGS Updater] Got (46/48): G2DManager_s.lua [ 30603B -> 29810B ]
+[2024-02-26 12:29:52] [DGS Updater] Requesting (47/48): test.lua
+[2024-02-26 12:29:52] [DGS Updater] Got (47/48): test.lua [ 48157B -> 48550B ]
+[2024-02-26 12:29:52] [DGS Updater] Requesting (48/48): classlib.lua
+[2024-02-26 12:29:52] [DGS Updater] Got (48/48): classlib.lua [ 68907B -> 68771B ]
+[2024-02-26 12:29:52] [DGS Updater] Updating version file
+[2024-02-26 12:29:52] [DGS Updater] Update successful: 48 files have been updated.
+[2024-02-26 12:29:52] [DGS Updater] Please restart DGS
+[2024-02-26 12:29:59] [DGS Config] Old config file has been converting to meta settings.
+[2024-02-26 12:29:59] [DGS Config] The old config file was deleted.
+[2024-03-10 18:40:23] [DGS Updater] Seetta attempt to update dgs (Allowed)
+[2024-03-10 18:40:23] [DGS Updater] Preparing to update dgs
+[2024-03-10 18:40:23] [DGS] Checking for updates..
+[2024-03-10 18:40:23] [DGS Updater] Requesting update data (From GitHub)...
+[2024-03-10 18:40:23] [DGS Updater] Update data retrieved successfully.
+[2024-03-10 18:40:23] [DGS Updater] Requesting verification data...
+[2024-03-10 18:40:24] [DGS Updater] Update required: (styleManager/styleManager.lua)
+[2024-03-10 18:40:24] [DGS Updater] Update required: (Core/edit.lua)
+[2024-03-10 18:40:24] [DGS Updater] Requesting (1/2): styleManager/styleManager.lua
+[2024-03-10 18:40:24] [DGS Updater] Got (1/2): styleManager/styleManager.lua [ 16667B -> 16663B ]
+[2024-03-10 18:40:24] [DGS Updater] Requesting (2/2): Core/edit.lua
+[2024-03-10 18:40:25] [DGS Updater] Got (2/2): Core/edit.lua [ 56145B -> 57434B ]
+[2024-03-10 18:40:25] [DGS Updater] Updating version file
+[2024-03-10 18:40:25] [DGS Updater] Update successful: 2 files have been updated.
+[2024-03-10 18:40:25] [DGS Updater] Please restart DGS
+[2024-03-10 18:40:46] [DGS Updater] Seetta attempt to update dgs (Allowed)
+[2024-03-10 18:40:46] [DGS Updater] Preparing to update dgs
+[2024-03-10 18:40:46] [DGS] Checking for updates..
+[2024-03-10 18:40:46] [DGS Updater] Requesting update data (From GitHub)...
+[2024-03-10 18:40:46] [DGS Updater] Update data retrieved successfully.
+[2024-03-10 18:40:46] [DGS Updater] Requesting verification data...
+[2024-03-10 18:40:46] [DGS Updater] Updating version file
+[2024-03-10 18:40:46] [DGS Updater] Update successful: 0 files have been updated.
+[2024-03-10 18:40:46] [DGS Updater] Please restart DGS
+[2024-06-03 20:34:48] [DGS Updater] Seetta attempt to update dgs (Allowed)
+[2024-06-03 20:34:48] [DGS Updater] Preparing to update dgs
+[2024-06-03 20:34:48] [DGS] Checking for updates..
+[2024-06-03 20:34:49] [DGS Updater] Requesting update data (From GitHub)...
+[2024-06-03 20:34:49] [DGS Updater] Update data retrieved successfully.
+[2024-06-03 20:34:49] [DGS Updater] Requesting verification data...
+[2024-06-03 20:34:50] [DGS Updater] Update required: (Core/button.lua)
+[2024-06-03 20:34:50] [DGS Updater] Update required: (Core/combobox.lua)
+[2024-06-03 20:34:50] [DGS Updater] Update required: (Core/scrollpane.lua)
+[2024-06-03 20:34:50] [DGS Updater] Update required: (Core/scalepane.lua)
+[2024-06-03 20:34:50] [DGS Updater] Update required: (client.lua)
+[2024-06-03 20:34:50] [DGS Updater] Update required: (plugin/BasicShape/circle.lua)
+[2024-06-03 20:34:50] [DGS Updater] Update required: (plugin/BasicShape/quadrilateral.fx)
+[2024-06-03 20:34:50] [DGS Updater] Update required: (plugin/BasicShape/quadrilateral.lua)
+[2024-06-03 20:34:51] [DGS Updater] Requesting (1/8): Core/button.lua
+[2024-06-03 20:34:51] [DGS Updater] Got (1/8): Core/button.lua [ 19301B -> 19305B ]
+[2024-06-03 20:34:51] [DGS Updater] Requesting (2/8): Core/combobox.lua
+[2024-06-03 20:34:51] [DGS Updater] Got (2/8): Core/combobox.lua [ 52855B -> 53566B ]
+[2024-06-03 20:34:51] [DGS Updater] Requesting (3/8): Core/scrollpane.lua
+[2024-06-03 20:34:51] [DGS Updater] Got (3/8): Core/scrollpane.lua [ 26981B -> 26948B ]
+[2024-06-03 20:34:51] [DGS Updater] Requesting (4/8): Core/scalepane.lua
+[2024-06-03 20:34:52] [DGS Updater] Got (4/8): Core/scalepane.lua [ 21582B -> 21549B ]
+[2024-06-03 20:34:52] [DGS Updater] Requesting (5/8): client.lua
+[2024-06-03 20:34:52] [DGS Updater] Got (5/8): client.lua [ 83906B -> 84173B ]
+[2024-06-03 20:34:52] [DGS Updater] Requesting (6/8): plugin/BasicShape/circle.lua
+[2024-06-03 20:34:52] [DGS Updater] Got (6/8): plugin/BasicShape/circle.lua [ 6795B -> 6797B ]
+[2024-06-03 20:34:52] [DGS Updater] Requesting (7/8): plugin/BasicShape/quadrilateral.fx
+[2024-06-03 20:34:52] [DGS Updater] Got (7/8): plugin/BasicShape/quadrilateral.fx [ 0B -> 3150B ]
+[2024-06-03 20:34:52] [DGS Updater] Requesting (8/8): plugin/BasicShape/quadrilateral.lua
+[2024-06-03 20:34:53] [DGS Updater] Got (8/8): plugin/BasicShape/quadrilateral.lua [ 0B -> 5460B ]
+[2024-06-03 20:34:53] [DGS Updater] Updating version file
+[2024-06-03 20:34:53] [DGS Updater] Update successful: 8 files have been updated.
+[2024-06-03 20:34:53] [DGS Updater] Please restart DGS

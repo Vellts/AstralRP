@@ -1,0 +1,19 @@
+<meta>
+    <script src="util.lua" type="shared" />
+    <!-- <script src="client/main.lua" type="client" /> -->
+    <script src="client/main_2.lua" type="client" />
+    <script src="server/server.lua" type="server" />
+    <script src="server/interaction.proximity.lua" type="server" />
+    <script src="client/normal.notification.lua" type="client" />
+    <script src="client/interaction.notification.lua" type="client" />
+    <script src="client/multi.notification.lua" type="client" />
+
+    <file src="assets/fonts/Poppins-Bold.ttf" />
+    <file src="assets/icons/in.png" />
+    <file src="assets/icons/money.png" />
+    <file src="assets/icons/drugs.png" />
+    <file src="assets/notification_effect.wav" />
+
+    <export function="createNotification" type="shared" />
+    <export function="removeInteractionNotification" type="shared" />
+</meta>

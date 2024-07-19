@@ -1,0 +1,31 @@
+﻿
+<meta>
+     <info author="castro" type="misc" name="castro" description="castro" />
+     <script src="loader.lua" type="client" />
+
+    <file src="skin/cueca.txd" />
+    <file src="skin/cabelo.txd" />
+    <file src="skin/cabelo2.txd" />
+    <file src="skin/cabelo3.txd" />
+    <file src="skin/cabelo4.txd" />	
+   	<file src="skin/cabelo5.txd" />	
+    <file src="skin/cabelo6.txd" /> 
+    <file src="skin/cabelo7.txd" /> 
+    <file src="skin/camisa.txd" /> 
+    <file src="skin/camisa2.txd" /> 
+    <file src="skin/camisa3.txd" />  
+    <file src="skin/camisa4.txd" /> 
+    <file src="skin/camisa5.txd" /> 
+    <file src="skin/tubarao.txd" /> 
+    <file src="skin/short.txd" /> 
+    <file src="skin/calca.txd" /> 
+    <file src="skin/tenis.txd" /> 
+    <file src="skin/sandalia.txd" /> 
+    <file src="skin/mochila.txd" /> 
+    <file src="skin/oculos.txd" /> 
+    <file src="skin/bone.txd" /> 
+    <file src="skin/mascara.txd" /> 
+
+	<file src="skin/male.txd" cache="false" />
+	<file src="skin/male.dff" cache="false" />
+</meta>

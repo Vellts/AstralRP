@@ -1,0 +1,8 @@
+<meta>
+    <info author="TMTMTL" type="script" version="1.0" name="Camera Resource" />
+    <min_mta_version client="1.5.8-9.20704"></min_mta_version>
+
+    <script src="c_zoomcam.lua" type="client" cache="false"/>
+    <script src="g_zoomcam.lua" type="shared" cache="false"/>
+    <script src="s_zoomcam.lua" type="server" />
+</meta>

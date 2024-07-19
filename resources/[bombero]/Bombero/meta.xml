@@ -1,0 +1,17 @@
+<meta>
+    <script src="client/client.lua" type="client" />
+    <script src="client/panel.lua" type="client" />
+    <script src="server/pickup_vehicle.lua" type="server" />
+    <script src="server/server.lua" type="server" />
+    <script src="server/server2.lua" type="server" />
+    <file src="assets/fondo_1.png"/>
+    <file src="assets/fondo_2.png"/>
+    <file src="assets/cancelar_1.png"/>
+    <file src="assets/cancelar_2.png"/>
+    <file src="assets/empezar_1.png"/>
+    <file src="assets/empezar_2.png"/>
+    <file src="assets/terminar_1.png"/>
+    <file src="assets/terminar_2.png"/>
+    <file src="assets/timbre.mp3"/>
+    <min_mta_version server="1.5.9" />
+</meta>

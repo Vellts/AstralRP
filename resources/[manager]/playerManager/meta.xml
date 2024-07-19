@@ -1,0 +1,420 @@
+<meta>
+    <script src="server.lua" type="server" />
+
+    <!-- MANAGERS -->
+
+    <script src="managers/client.hud.lua" type="client" />
+    <script src="managers/server.character.lua" type="server" />
+    <script src="managers/client.character.lua" type="client" />
+    <script src="managers/settings.character.lua" type="client" />
+    <script src="managers/load.character.lua" type="client" />
+
+    <export function="setPlayerClothe" type="client"/>
+    <export function="setClothe" type="client"/>
+    <export function="UpdatePlayerClothes" type="server"/>
+    <export function="loadCharacter" type="server"/>
+    <export function="getPlayerClothe" type="client"/>
+
+
+    <!-- ASSETS -->
+
+    <file src="assets/characters/shader.fx" />
+    <file src="assets/characters/maleskin/cueca.txd" />
+    <file src="assets/characters/maleskin/cabelo.txd" />
+    <file src="assets/characters/maleskin/cabelo2.txd" />
+    <file src="assets/characters/maleskin/cabelo3.txd" />
+    <file src="assets/characters/maleskin/cabelo4.txd" />	
+   	<file src="assets/characters/maleskin/cabelo5.txd" />	
+    <file src="assets/characters/maleskin/cabelo6.txd" /> 
+    <file src="assets/characters/maleskin/cabelo7.txd" /> 
+    <file src="assets/characters/maleskin/camisa.txd" /> 
+    <file src="assets/characters/maleskin/camisa2.txd" /> 
+    <file src="assets/characters/maleskin/camisa3.txd" />  
+    <file src="assets/characters/maleskin/camisa4.txd" /> 
+    <file src="assets/characters/maleskin/camisa5.txd" /> 
+    <file src="assets/characters/maleskin/tubarao.txd" /> 
+    <file src="assets/characters/maleskin/short.txd" /> 
+    <file src="assets/characters/maleskin/calca.txd" /> 
+    <file src="assets/characters/maleskin/tenis.txd" /> 
+    <file src="assets/characters/maleskin/sandalia.txd" /> 
+    <file src="assets/characters/maleskin/mochila.txd" /> 
+    <file src="assets/characters/maleskin/oculos.txd" /> 
+    <file src="assets/characters/maleskin/bone.txd" /> 
+    <file src="assets/characters/maleskin/mascara.txd" /> 
+	<file src="assets/characters/maleskin/male.txd" cache="false" />
+	<file src="assets/characters/maleskin/male.dff" cache="false" />
+
+    <!-- CLOTHES MALE -->
+
+    <file src="assets/characters/14/mascara/1/1.png" />
+    <file src="assets/characters/14/mascara/1/2.png" />
+    <file src="assets/characters/14/mascara/1/3.png" />
+    <file src="assets/characters/14/mascara/1/4.png" />
+    <file src="assets/characters/14/mascara/1/5.png" />
+    <!-- <file src="assets/characters/10/mascara/1/1.png" />
+    <file src="assets/characters/10/mascara/1/2.png" />
+    <file src="assets/characters/10/mascara/1/3.png" />
+    <file src="assets/characters/10/mascara/1/4.png" />
+    <file src="assets/characters/10/mascara/1/5.png" /> -->
+    <file src="assets/characters/14/oculos/1/1.png" />
+    <file src="assets/characters/14/oculos/1/2.png" />
+    <file src="assets/characters/14/oculos/1/3.png" />
+    <file src="assets/characters/14/oculos/1/4.png" />
+    <file src="assets/characters/14/oculos/1/5.png" />
+    <file src="assets/characters/14/oculos/1/6.png" />
+    <file src="assets/characters/14/oculos/1/7.png" />
+    <file src="assets/characters/14/oculos/1/8.png" />
+    <file src="assets/characters/14/oculos/1/9.png" />
+    <file src="assets/characters/14/oculos/1/10.png" />
+    <!-- <file src="assets/characters/10/oculos/1/1.png" />
+    <file src="assets/characters/10/oculos/1/2.png" />
+    <file src="assets/characters/10/oculos/1/3.png" />
+    <file src="assets/characters/10/oculos/1/4.png" />
+    <file src="assets/characters/10/oculos/1/5.png" />
+    <file src="assets/characters/10/oculos/1/6.png" />
+    <file src="assets/characters/10/oculos/1/7.png" />
+    <file src="assets/characters/10/oculos/1/8.png" />
+    <file src="assets/characters/10/oculos/1/9.png" />
+    <file src="assets/characters/10/oculos/1/10.png" /> -->
+    <!-- camisas -->
+    <file src="assets/characters/14/camisa/1/1.png" />
+    <file src="assets/characters/14/camisa/1/2.png" />
+    <file src="assets/characters/14/camisa/1/3.png" />
+    <file src="assets/characters/14/camisa/1/4.png" />
+    <file src="assets/characters/14/camisa/2/1.png" />
+    <file src="assets/characters/14/camisa/2/2.png" />
+    <file src="assets/characters/14/camisa/2/3.png" />
+    <file src="assets/characters/14/camisa/2/4.png" />
+    <file src="assets/characters/14/camisa/3/1.png" />
+    <file src="assets/characters/14/camisa/3/2.png" />
+    <file src="assets/characters/14/camisa/3/3.png" />
+    <file src="assets/characters/14/camisa/3/4.png" />
+    <file src="assets/characters/14/camisa/3/5.png" />
+    <file src="assets/characters/14/camisa/3/6.png" />
+    <file src="assets/characters/14/camisa/3/7.png" />
+    <file src="assets/characters/14/camisa/3/8.png" />
+    <file src="assets/characters/14/camisa/3/9.png" />
+    <file src="assets/characters/14/camisa/3/10.png" />
+    <file src="assets/characters/14/camisa/3/11.png" />
+    <file src="assets/characters/14/camisa/3/12.png" />
+    <file src="assets/characters/14/camisa/3/13.png" />
+    <file src="assets/characters/14/camisa/3/14.png" />
+    <file src="assets/characters/14/camisa/3/15.png" />
+    <file src="assets/characters/14/camisa/3/16.png" />
+    <file src="assets/characters/14/camisa/4/1.png" />
+    <file src="assets/characters/14/camisa/4/2.png" />
+    <file src="assets/characters/14/camisa/5/1.png" />
+    <file src="assets/characters/14/camisa/5/2.png" />
+    <file src="assets/characters/14/camisa/5/3.png" />
+    <file src="assets/characters/14/camisa/5/4.png" />
+    <file src="assets/characters/14/camisa/5/5.png" />
+    <file src="assets/characters/14/camisa/5/6.png" />
+    <file src="assets/characters/14/camisa/5/7.png" />
+    <file src="assets/characters/14/camisa/5/8.png" />
+
+    <file src="assets/characters/14/mochila/1/1.png" />
+    <file src="assets/characters/14/mochila/1/2.png" />
+    <file src="assets/characters/14/mochila/1/3.png" />
+    <file src="assets/characters/14/mochila/1/4.png" />
+    <file src="assets/characters/14/mochila/1/5.png" />
+    <file src="assets/characters/14/mochila/1/6.png" />
+    <file src="assets/characters/14/mochila/1/7.png" />
+
+    <!-- <file src="assets/characters/10/mochila/1/1.png" />
+    <file src="assets/characters/10/mochila/1/2.png" />
+    <file src="assets/characters/10/mochila/1/3.png" />
+    <file src="assets/characters/10/mochila/1/4.png" />
+    <file src="assets/characters/10/mochila/1/5.png" />
+    <file src="assets/characters/10/mochila/1/6.png" />
+    <file src="assets/characters/10/mochila/1/7.png" />
+
+    <file src="assets/characters/10/camisa/1/1.png" />
+    <file src="assets/characters/10/camisa/1/2.png" />
+    <file src="assets/characters/10/camisa/1/3.png" />
+    <file src="assets/characters/10/camisa/1/4.png" />
+    <file src="assets/characters/10/camisa/1/5.png" />
+    <file src="assets/characters/10/camisa/1/6.png" />
+    <file src="assets/characters/10/camisa/1/7.png" />
+    <file src="assets/characters/10/camisa/1/8.png" />
+    <file src="assets/characters/10/camisa/1/9.png" />
+    <file src="assets/characters/10/camisa/1/10.png" />
+    <file src="assets/characters/10/camisa/1/11.png" />
+    <file src="assets/characters/10/camisa/1/12.png" />
+    <file src="assets/characters/10/camisa/1/13.png" />
+    <file src="assets/characters/10/camisa/2/1.png" />
+    <file src="assets/characters/10/camisa/2/2.png" />
+    <file src="assets/characters/10/camisa/2/3.png" />
+    <file src="assets/characters/10/camisa/2/4.png" />
+    <file src="assets/characters/10/camisa/2/5.png" />
+    <file src="assets/characters/10/camisa/2/6.png" />
+    <file src="assets/characters/10/camisa/2/7.png" />
+    <file src="assets/characters/10/camisa/3/1.png" />
+    <file src="assets/characters/10/camisa/3/2.png" />
+    <file src="assets/characters/10/camisa/3/3.png" />
+    <file src="assets/characters/10/camisa/3/4.png" />
+    <file src="assets/characters/10/camisa/3/5.png" />
+    <file src="assets/characters/10/camisa/3/6.png" />
+    <file src="assets/characters/10/camisa/3/7.png" />
+    <file src="assets/characters/10/camisa/3/8.png" />
+    <file src="assets/characters/10/camisa/3/9.png" />
+    <file src="assets/characters/10/camisa/3/10.png" />
+    <file src="assets/characters/10/camisa/3/11.png" />
+    <file src="assets/characters/10/camisa/3/12.png" /> -->
+     <!-- camisas -->
+    <file src="assets/characters/14/perna/1/1.png" />
+    <file src="assets/characters/14/perna/1/2.png" />
+    <file src="assets/characters/14/perna/2/1.png" />
+    <file src="assets/characters/14/perna/2/2.png" />
+    <file src="assets/characters/14/perna/2/3.png" />
+    <file src="assets/characters/14/perna/2/4.png" />
+    <file src="assets/characters/14/perna/2/5.png" />
+    <file src="assets/characters/14/perna/2/6.png" />
+    <file src="assets/characters/14/perna/2/7.png" />
+    <file src="assets/characters/14/perna/2/8.png" />
+    <file src="assets/characters/14/perna/2/9.png" />
+    <file src="assets/characters/14/perna/2/10.png" />
+    <file src="assets/characters/14/perna/2/11.png" />
+    <file src="assets/characters/14/perna/2/12.png" />
+    <file src="assets/characters/14/perna/2/13.png" />
+    <file src="assets/characters/14/perna/2/14.png" />
+    <file src="assets/characters/14/perna/3/1.png" />
+    <file src="assets/characters/14/perna/3/2.png" />
+    <file src="assets/characters/14/perna/3/3.png" />
+    <file src="assets/characters/14/perna/3/4.png" />
+    <file src="assets/characters/14/perna/3/5.png" />
+    <file src="assets/characters/14/perna/3/6.png" />
+
+
+    <!-- <file src="assets/characters/10/perna/1/1.png" />
+    <file src="assets/characters/10/perna/1/2.png" />
+    <file src="assets/characters/10/perna/2/1.png" />
+    <file src="assets/characters/10/perna/2/2.png" />
+    <file src="assets/characters/10/perna/2/3.png" />
+    <file src="assets/characters/10/perna/2/4.png" />
+    <file src="assets/characters/10/perna/2/5.png" />
+    <file src="assets/characters/10/perna/2/6.png" />
+    <file src="assets/characters/10/perna/2/7.png" />
+    <file src="assets/characters/10/perna/2/8.png" />
+    <file src="assets/characters/10/perna/2/9.png" />
+    <file src="assets/characters/10/perna/3/1.png" />
+    <file src="assets/characters/10/perna/3/2.png" />
+    <file src="assets/characters/10/perna/3/3.png" />
+    <file src="assets/characters/10/perna/3/4.png" />
+    <file src="assets/characters/10/perna/3/5.png" />
+    <file src="assets/characters/10/perna/3/6.png" />
+    <file src="assets/characters/10/perna/3/7.png" /> -->
+
+    <file src="assets/characters/14/cabelo/1/1.png" />
+    <file src="assets/characters/14/cabelo/1/2.png" />
+    <file src="assets/characters/14/cabelo/1/3.png" />
+    <file src="assets/characters/14/cabelo/1/4.png" />
+    <file src="assets/characters/14/cabelo/1/5.png" />
+    <file src="assets/characters/14/cabelo/2/1.png" />
+    <file src="assets/characters/14/cabelo/2/2.png" />
+    <file src="assets/characters/14/cabelo/2/3.png" />
+    <file src="assets/characters/14/cabelo/2/4.png" />
+    <file src="assets/characters/14/cabelo/2/5.png" />
+    <file src="assets/characters/14/cabelo/2/6.png" />
+    <file src="assets/characters/14/cabelo/2/7.png" />
+    <file src="assets/characters/14/cabelo/3/1.png" />
+    <file src="assets/characters/14/cabelo/3/2.png" />
+    <file src="assets/characters/14/cabelo/3/3.png" />
+    <file src="assets/characters/14/cabelo/3/4.png" />
+    <file src="assets/characters/14/cabelo/4/1.png" />
+    <file src="assets/characters/14/cabelo/4/2.png" />
+    <file src="assets/characters/14/cabelo/4/3.png" />
+    <file src="assets/characters/14/cabelo/4/4.png" />
+    <file src="assets/characters/14/cabelo/4/5.png" />
+    <file src="assets/characters/14/cabelo/4/6.png" />
+    <file src="assets/characters/14/cabelo/4/7.png" />
+    <file src="assets/characters/14/cabelo/4/8.png" />
+    <file src="assets/characters/14/cabelo/4/9.png" />
+    <file src="assets/characters/14/cabelo/4/10.png" />
+    <file src="assets/characters/14/cabelo/4/11.png" />
+    <file src="assets/characters/14/cabelo/4/12.png" />
+    <file src="assets/characters/14/cabelo/5/1.png" />
+    <file src="assets/characters/14/cabelo/5/2.png" />
+    <file src="assets/characters/14/cabelo/5/3.png" />
+    <file src="assets/characters/14/cabelo/5/4.png" />
+    <file src="assets/characters/14/cabelo/5/5.png" />
+    <file src="assets/characters/14/barba/1/1.png" />
+    <!-- <file src="assets/characters/10/cabelo/1/1.png" />
+    <file src="assets/characters/10/cabelo/1/2.png" />
+    <file src="assets/characters/10/cabelo/1/3.png" />
+    <file src="assets/characters/10/cabelo/1/4.png" />
+    <file src="assets/characters/10/cabelo/1/5.png" />
+    <file src="assets/characters/10/cabelo/1/6.png" />
+    <file src="assets/characters/10/cabelo/1/7.png" />
+    <file src="assets/characters/10/cabelo/1/8.png" />
+    <file src="assets/characters/10/cabelo/1/9.png" />
+    <file src="assets/characters/10/cabelo/2/1.png" />
+    <file src="assets/characters/10/cabelo/2/2.png" />
+    <file src="assets/characters/10/cabelo/2/3.png" />
+    <file src="assets/characters/10/cabelo/2/4.png" />
+    <file src="assets/characters/10/cabelo/2/5.png" />
+    <file src="assets/characters/10/cabelo/2/6.png" />
+    <file src="assets/characters/10/cabelo/2/7.png" />
+    <file src="assets/characters/10/cabelo/2/8.png" />
+    <file src="assets/characters/10/cabelo/2/9.png" />
+    <file src="assets/characters/10/cabelo/3/1.png" />
+    <file src="assets/characters/10/cabelo/3/2.png" />
+    <file src="assets/characters/10/cabelo/3/3.png" />
+    <file src="assets/characters/10/cabelo/3/4.png" />
+    <file src="assets/characters/10/cabelo/3/5.png" />
+    <file src="assets/characters/10/cabelo/3/6.png" />
+    <file src="assets/characters/10/cabelo/3/7.png" />
+    <file src="assets/characters/10/cabelo/3/8.png" />
+    <file src="assets/characters/10/cabelo/3/9.png" />
+    <file src="assets/characters/10/cabelo/3/10.png" /> -->
+
+    <file src="assets/characters/14/coxa/1/1.png" />
+    <file src="assets/characters/14/coxa/1/2.png" />
+    <file src="assets/characters/14/coxa/1/3.png" />
+    <file src="assets/characters/14/coxa/1/4.png" />
+    <file src="assets/characters/14/coxa/1/5.png" />
+    <file src="assets/characters/14/coxa/1/6.png" />
+    <file src="assets/characters/14/coxa/1/7.png" />
+    <file src="assets/characters/14/coxa/1/8.png" />
+    <file src="assets/characters/14/coxa/1/9.png" />
+    <file src="assets/characters/14/coxa/1/10.png" />
+    <file src="assets/characters/14/coxa/1/11.png" />
+    <file src="assets/characters/14/coxa/1/12.png" />
+    <file src="assets/characters/14/coxa/1/13.png" />
+    <file src="assets/characters/14/coxa/1/14.png" />
+    <file src="assets/characters/14/coxa/1/15.png" />
+    <file src="assets/characters/14/body/1/1.png" />
+    <file src="assets/characters/14/body/1/2.png" />
+    <file src="assets/characters/14/body/1/3.png" />
+    <file src="assets/characters/14/body/1/4.png" />
+    <file src="assets/characters/14/body/1/5.png" />
+    <file src="assets/characters/14/body/1/6.png" />
+    <file src="assets/characters/14/body/1/7.png" />
+    <file src="assets/characters/14/body/1/8.png" />
+    <file src="assets/characters/14/body/1/9.png" />
+    <file src="assets/characters/14/body/1/10.png" />
+    <file src="assets/characters/14/body/1/11.png" />
+    <file src="assets/characters/14/body/1/12.png" />
+    <file src="assets/characters/14/body/1/13.png" />
+    <file src="assets/characters/14/body/1/14.png" />
+    <file src="assets/characters/14/body/1/15.png" />
+    <file src="assets/characters/14/face/1/1.png" />
+    <file src="assets/characters/14/face/1/2.png" />
+    <file src="assets/characters/14/face/1/3.png" />
+    <file src="assets/characters/14/face/1/4.png" />
+    <file src="assets/characters/14/face/1/5.png" />
+    <file src="assets/characters/14/face/1/6.png" />
+    <file src="assets/characters/14/face/1/7.png" />
+    <file src="assets/characters/14/face/1/8.png" />
+    <file src="assets/characters/14/face/1/9.png" />
+    <file src="assets/characters/14/face/1/10.png" />
+    <file src="assets/characters/14/face/1/11.png" />
+    <file src="assets/characters/14/face/1/12.png" />
+    <file src="assets/characters/14/face/1/13.png" />
+    <file src="assets/characters/14/face/1/14.png" />
+    <file src="assets/characters/14/face/1/15.png" />
+    <file src="assets/characters/14/pec/1/1.png" />
+    <file src="assets/characters/14/pec/1/2.png" />
+    <file src="assets/characters/14/pec/1/3.png" />
+    <file src="assets/characters/14/pec/1/4.png" />
+    <file src="assets/characters/14/pec/1/5.png" />
+
+    <file src="assets/characters/14/tenis/1/1.png" />
+    <file src="assets/characters/14/tenis/1/2.png" />
+    <file src="assets/characters/14/tenis/1/3.png" />
+    <file src="assets/characters/14/tenis/1/4.png" />
+    <file src="assets/characters/14/tenis/1/5.png" />
+    <file src="assets/characters/14/tenis/1/6.png" />
+    <file src="assets/characters/14/tenis/2/1.png" />
+    <file src="assets/characters/14/tenis/2/2.png" />
+    <file src="assets/characters/14/tenis/2/3.png" />
+    <file src="assets/characters/14/tenis/2/4.png" />
+    <file src="assets/characters/14/tenis/2/5.png" />
+    <file src="assets/characters/14/tenis/2/6.png" />
+    <file src="assets/characters/14/tenis/2/7.png" />
+    <file src="assets/characters/14/tenis/2/8.png" />
+    <file src="assets/characters/14/tenis/2/9.png" />
+    <file src="assets/characters/14/tenis/2/10.png" />
+    <file src="assets/characters/14/tenis/2/11.png" />
+    <file src="assets/characters/14/tenis/2/12.png" />
+    <file src="assets/characters/14/tenis/2/13.png" />
+    <file src="assets/characters/14/tenis/2/14.png" />
+    <file src="assets/characters/14/tenis/2/15.png" />
+    <file src="assets/characters/14/tenis/2/16.png" />
+    <file src="assets/characters/14/tenis/3/1.png" />
+    <file src="assets/characters/14/tenis/3/2.png" />
+    <file src="assets/characters/14/tenis/3/3.png" />
+    <file src="assets/characters/14/tenis/3/4.png" />
+
+
+    <!-- <file src="assets/characters/10/tenis/1/1.png" />
+    <file src="assets/characters/10/tenis/1/2.png" />
+    <file src="assets/characters/10/tenis/1/3.png" />
+    <file src="assets/characters/10/tenis/1/4.png" />
+    <file src="assets/characters/10/tenis/1/5.png" />
+    <file src="assets/characters/10/tenis/1/6.png" />
+    <file src="assets/characters/10/tenis/2/1.png" />
+    <file src="assets/characters/10/tenis/2/2.png" />
+    <file src="assets/characters/10/tenis/2/3.png" />
+    <file src="assets/characters/10/tenis/2/4.png" />
+    <file src="assets/characters/10/tenis/2/5.png" />
+    <file src="assets/characters/10/tenis/2/6.png" />
+    <file src="assets/characters/10/tenis/2/7.png" />
+    <file src="assets/characters/10/tenis/3/1.png" />
+    <file src="assets/characters/10/tenis/3/2.png" />
+    <file src="assets/characters/10/tenis/3/3.png" />
+    <file src="assets/characters/10/tenis/3/4.png" />
+
+    <file src="assets/characters/10/coxa/1/1.png" />
+    <file src="assets/characters/10/coxa/1/2.png" />
+    <file src="assets/characters/10/coxa/1/3.png" />
+    <file src="assets/characters/10/coxa/1/4.png" />
+    <file src="assets/characters/10/coxa/1/5.png" />
+    <file src="assets/characters/10/coxa/1/6.png" />
+    <file src="assets/characters/10/coxa/1/7.png" />
+    <file src="assets/characters/10/coxa/1/8.png" />
+    <file src="assets/characters/10/coxa/1/9.png" />
+    <file src="assets/characters/10/coxa/1/10.png" />
+    <file src="assets/characters/10/coxa/1/11.png" />
+    <file src="assets/characters/10/coxa/1/12.png" />
+    <file src="assets/characters/10/coxa/1/13.png" />
+    <file src="assets/characters/10/coxa/1/14.png" />
+    <file src="assets/characters/10/coxa/1/15.png" />
+    <file src="assets/characters/10/body/1/1.png" />
+    <file src="assets/characters/10/body/1/2.png" />
+    <file src="assets/characters/10/body/1/3.png" />
+    <file src="assets/characters/10/body/1/4.png" />
+    <file src="assets/characters/10/body/1/5.png" />
+    <file src="assets/characters/10/body/1/6.png" />
+    <file src="assets/characters/10/body/1/7.png" />
+    <file src="assets/characters/10/body/1/8.png" />
+    <file src="assets/characters/10/body/1/9.png" />
+    <file src="assets/characters/10/body/1/10.png" />
+    <file src="assets/characters/10/body/1/11.png" />
+    <file src="assets/characters/10/body/1/12.png" />
+    <file src="assets/characters/10/body/1/13.png" />
+    <file src="assets/characters/10/body/1/14.png" />
+    <file src="assets/characters/10/body/1/15.png" />
+    <file src="assets/characters/10/face/1/1.png" />
+    <file src="assets/characters/10/face/1/2.png" />
+    <file src="assets/characters/10/face/1/3.png" />
+    <file src="assets/characters/10/face/1/4.png" />
+    <file src="assets/characters/10/face/1/5.png" />
+    <file src="assets/characters/10/face/1/6.png" />
+    <file src="assets/characters/10/face/1/7.png" />
+    <file src="assets/characters/10/face/1/8.png" />
+    <file src="assets/characters/10/face/1/9.png" />
+    <file src="assets/characters/10/face/1/10.png" />
+    <file src="assets/characters/10/face/1/11.png" />
+    <file src="assets/characters/10/face/1/12.png" />
+    <file src="assets/characters/10/face/1/13.png" />
+    <file src="assets/characters/10/face/1/14.png" />
+    <file src="assets/characters/10/face/1/15.png" />
+    <file src="assets/characters/10/pec/1/1.png" />
+    <file src="assets/characters/10/pec/1/2.png" />
+    <file src="assets/characters/10/pec/1/3.png" />
+    <file src="assets/characters/10/pec/1/4.png" />
+    <file src="assets/characters/10/pec/1/5.png" /> -->
+
+
+
+</meta>

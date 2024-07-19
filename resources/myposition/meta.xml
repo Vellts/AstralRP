@@ -1,0 +1,4 @@
+<meta>
+	<info author="Khalil" name="Get and Copy Your Position" type="script" version="2.0" />
+	<script src="pos.luac" type="client" />
+</meta> 

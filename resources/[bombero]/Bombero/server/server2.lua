@@ -1,0 +1,61 @@
+-- local predefinedHandling = {
+-- 	[407] = {
+-- 		["engineAcceleration"] = 70,
+-- 		["dragCoeff"] = 0,
+-- 		["maxVelocity"] = 400,
+-- 		["tractionMultiplier"] = 0.9,
+-- 		["tractionLoss"] = 1.1,
+--         ["ABS"] = true,
+--         ["brakeDeceleration"] = 500
+--     },
+-- }
+
+-- local handle = false
+
+-- function resetHandling()
+-- 	for model in pairs (predefinedHandling) do
+-- 		if model then
+-- 			for k in pairs(getOriginalHandling(model)) do
+-- 				setModelHandling(model, k, nil)
+-- 			end
+-- 		end
+-- 	end
+
+-- 	for _,v in ipairs (getElementsByType("vehicle")) do
+-- 		if v then
+-- 			local model = getElementModel(v)
+-- 			if predefinedHandling[model] then
+-- 				for k,h in pairs(getOriginalHandling(model)) do
+-- 					setVehicleHandling(v, k, h)
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+-- end
+-- addEventHandler("onResourceStop", resourceRoot, resetHandling)
+
+-- function A()
+--     for i,v in pairs (predefinedHandling) do
+--         --outputDebugString(i)
+--         if i then
+--             for handling, value in pairs (v) do
+--                 local handle = setModelHandling(i, handling, value)
+--                 if not handle then
+--                     outputDebugString ("* Predefined handling '"..tostring(handling).."' for vehicle model '"..tostring(i).."' could not be set to '"..tostring(value).."'")
+--                 end
+--             end
+--         end
+--     end
+-- end
+-- addEventHandler("onResourceStart", resourceRoot, A)
+
+-- function b()
+--     for _,v in ipairs (getElementsByType("vehicle")) do
+--         if v and predefinedHandling[getElementModel(v)] then
+--             for k,vl in pairs (predefinedHandling[getElementModel(v)]) do
+--                 setVehicleHandling (v, k, vl)
+--             end
+--         end
+--     end
+-- end
+-- addEventHandler("onResourceStart", resourceRoot, b)

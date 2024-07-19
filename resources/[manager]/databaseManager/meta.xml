@@ -1,0 +1,9 @@
+<meta>
+    <script src="server.lua"  type="server"/>
+    <script src="querys.lua" type="server"/>
+    <script src="utils.lua" type="server"/>
+    <script src="config.lua" type="server"/>
+
+    <export function="getDatabaseConnection" type="server" />
+    <export function="generateUUID" type="server" />
+</meta>

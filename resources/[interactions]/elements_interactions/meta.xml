@@ -1,0 +1,8 @@
+<meta>
+    <script src="main.lua" type="server" />
+    <script src="util.lua" type="shared" />
+    <script src="vehicles/c.vehicle.lua" type="client" />
+    <script src="vehicles/s.vehicle.lua" type="server" />
+    <script src="players/c.player.lua" type="client" />
+    <script src="players/s.player.lua" type="server" />
+</meta>

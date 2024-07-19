@@ -1,0 +1,22 @@
+<meta>
+    <!--  SCRIPTS  -->
+
+    <script src="hud/c.hud.lua" type="client"></script>
+    <script src="hud/svgs.lua" type="client"></script>
+    <script src="hud/vehicle.lua" type="shared"></script>
+    <script src="hud/mainC.lua" type="client"></script>
+    <script src="hud/mainS.lua" type="server"></script>
+    <script src="core/vehicleS.lua" type="server"></script>
+    <script src="core/vehicleC.lua" type="client"></script>
+
+    <!--  FONTS  -->
+
+    <file src="assets/fonts/Poppins-MediumItalic.ttf" />
+    <!-- <file src="assets/fonts/Poppins-SemIBold.ttf" /> -->
+
+    <!--  IMAGES  -->
+
+    <file src="assets/images/gears.png" />
+
+
+</meta>

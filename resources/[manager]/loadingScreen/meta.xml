@@ -1,0 +1,13 @@
+<meta>
+    <script src="loadingScreen.lua"  type="client"/>
+    <script src="config.lua"  type="shared"/>
+
+    <file src="assets/wallpaper.jpg" />
+    <file src="assets/logo.png" />
+    <file src="assets/artworks/1.png" />
+    <file src="assets/artworks/2.png" />
+    <file src="assets/artworks/3.png" />
+    <file src="assets/artworks/4.png" />
+    <file src="assets/fonts/Poppins-Bold.ttf" />
+    <download_priority_group>1</download_priority_group>
+</meta>

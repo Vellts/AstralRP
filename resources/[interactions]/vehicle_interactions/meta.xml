@@ -1,0 +1,6 @@
+<meta>
+    <script src="server/server.vehicle.lua" type="server"></script>
+    <script src="client/client.vehicle.lua" type="client"></script>
+    <file src="assets/drive.png" />
+    <file src="assets/sit.png" />
+</meta>

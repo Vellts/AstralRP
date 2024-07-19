@@ -1,0 +1,6 @@
+<meta>
+    <script src="server/overview.server.lua" type="server" />
+    <script src="client/overview.client.lua" type="client" />
+    
+    <export function="updateChartsDeveloper" type="server" />
+</meta>
