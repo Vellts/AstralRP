@@ -7,6 +7,7 @@
     <script src="fps.lua" type="client"></script>
     <script src="weapons.lua" type="client"></script>
     <script src="test.lua" type="client"></script>
+    <script src="location_hour.lua" type="client"></script>
     <script src="utils.lua" type="shared"></script>
     <script src="exports.lua" type="shared"></script>
 
@@ -36,6 +37,8 @@
     <file src="assets/images/hunger.png" />
     <file src="assets/images/drink.png" />
     <file src="assets/images/developer.png" />
+    <file src="assets/images/hour.png" />
+    <file src="assets/images/location.png" />
 
     <!--  WEAPONS  -->
 

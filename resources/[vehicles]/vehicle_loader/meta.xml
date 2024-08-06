@@ -1,0 +1,25 @@
+<meta>
+    <script src="core/load.vehicleS.lua" type="server"></script>
+    <script src="util/vehicles.lua" type="server"></script>
+    <!-- AUTOS -->
+    <file src="models/vehicles/mbamg250.dff"/>
+    <file src="models/vehicles/mbamg250.txd"/>
+    <file src="models/vehicles/ff12berlinetta.dff"/>
+    <file src="models/vehicles/ff12berlinetta.txd"/>
+    <file src="models/vehicles/laventador.dff"/>
+    <file src="models/vehicles/laventador.txd"/>
+    <file src="models/vehicles/p911turbos.dff"/>
+    <file src="models/vehicles/p911turbos.txd"/>
+    <file src="models/vehicles/bmwm4.dff"/>
+    <file src="models/vehicles/bmwm4.txd"/>
+    <file src="models/vehicles/lis300.dff"/>
+    <file src="models/vehicles/lis300.txd"/>
+    <file src="models/vehicles/jwrangler.dff"/>
+    <file src="models/vehicles/jwrangler.txd"/>
+    <file src="models/vehicles/dram1500.dff"/>
+    <file src="models/vehicles/dram1500.txd"/>
+    <file src="models/vehicles/tcxse.dff"/>
+    <file src="models/vehicles/tcxse.txd"/>
+    <file src="models/vehicles/sanchez.dff"/>
+    <file src="models/vehicles/sanchez.txd"/>
+</meta>

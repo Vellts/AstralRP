@@ -3,6 +3,7 @@ local function drawVelocimeter()
     drawVehicleVelocity()
     healthVehicle()
     updateSvgs()
+    bindKey("F10", "down", ShowHud)
 end
 addEvent("vel::draw", true)
 addEventHandler("vel::draw", root, drawVelocimeter)

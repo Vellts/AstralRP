@@ -22,48 +22,9 @@
     <file src="models/peds/20003.txd"/>
 
     <!-- Vehicle Mods -->
-    <!-- AUTOS -->
-    <file src="models/vehicles/911s.dff"/>
-    <file src="models/vehicles/911s.txd"/>
-    <file src="models/vehicles/f150.dff"/>
-    <file src="models/vehicles/f150.txd"/>
-    <file src="models/vehicles/amvantages.dff"/>
-    <file src="models/vehicles/amvantages.txd"/>
-    <file src="models/vehicles/fordgtcl.dff"/>
-    <file src="models/vehicles/fordgtcl.txd"/>
-    <file src="models/vehicles/cl300c.dff"/>
-    <file src="models/vehicles/cl300c.txd"/>
-    <file src="models/vehicles/siwrxsti.dff"/>
-    <file src="models/vehicles/siwrxsti.txd"/>
-    <file src="models/vehicles/dcrt1970.dff"/>
-    <file src="models/vehicles/dcrt1970.txd"/>
-    <file src="models/vehicles/dcsrth.dff"/>
-    <file src="models/vehicles/dcsrth.txd"/>
-    <file src="models/vehicles/phttu.dff"/>
-    <file src="models/vehicles/phttu.txd"/>
-    <file src="models/vehicles/wmlh.dff"/>
-    <file src="models/vehicles/wmlh.txd"/>
-    <file src="models/vehicles/ff550.dff"/>
-    <file src="models/vehicles/ff550.txd"/>
-    <file src="models/vehicles/flferrari.dff"/>
-    <file src="models/vehicles/flferrari.txd"/>
-    <file src="models/vehicles/pcgt.dff"/>
-    <file src="models/vehicles/pcgt.txd"/>
+    <file src="models/vehicles/mbamg250.dff"/>
+    <file src="models/vehicles/mbamg250.txd"/>
     <!-- MOTOS -->
-    <file src="models/vehicles/hdfbl.dff"/>
-    <file src="models/vehicles/hdfbl.txd"/>
-    <file src="models/vehicles/ymxt660.dff"/>
-    <file src="models/vehicles/ymxt660.txd"/>
-    <file src="models/vehicles/dtdmcrr.dff"/>
-    <file src="models/vehicles/dtdmcrr.txd"/>
-    <file src="models/vehicles/dtdv.dff"/>
-    <file src="models/vehicles/dtdv.txd"/>
-    <file src="models/vehicles/ymxj6.dff"/>
-    <file src="models/vehicles/ymxj6.txd"/>
-    <file src="models/vehicles/kwnj300r.dff"/>
-    <file src="models/vehicles/kwnj300r.txd"/>
-    <file src="models/vehicles/hayabusa.dff"/>
-    <file src="models/vehicles/hayabusa.txd"/>
 
     <!-- Object Mods -->
     <file src="models/objects/50001.dff"/>

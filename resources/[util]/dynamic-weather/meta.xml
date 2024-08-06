@@ -1,0 +1,7 @@
+<meta>
+	<info name="Dynamic_Weather" description="Dynamic Weather System" author="DazzaJay" type="script" version="3.1.5" />
+	
+	<script src="dynamic-weather.lua" type="server" />
+	<script src="version.lua" type="server" />
+
+</meta>

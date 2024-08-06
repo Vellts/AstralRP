@@ -97,7 +97,7 @@ function drawWeapons()
         font = hud.fontMedium,
     })
 
-    return image
+    return {weaponData.image, weaponData.weaponName, weaponData.weaponAmmo}
 end
 
 

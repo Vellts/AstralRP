@@ -58,6 +58,7 @@ end
 function setPlayerClothe(element, skin, clothes)
 	-- outputDebugString(element, skin, clothes)
 	-- iprint(element, skin, clothes)
+	iprint("aa")
 	for clothe, _ in pairs(clothes) do
 		if clothe ~= "skin" then
 			setClothe(element, skin, clothe, clothes[clothe][1], clothes[clothe][2])

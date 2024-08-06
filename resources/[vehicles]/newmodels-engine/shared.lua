@@ -67,6 +67,7 @@ end
 local function createElementSafe(elementType, id, ...)
 
 	local baseModel, isCustom = exports[newmodelsResourceName]:checkModelID(id, elementType)
+	iprint(baseModel)
 	if tonumber(baseModel) then
 		
 		local element = createElementWithModel(elementType, baseModel, ...)
@@ -76,6 +77,7 @@ local function createElementSafe(elementType, id, ...)
 
 		if isCustom then
 			setElementData(element, dataNames[elementType], id, not isClientFile)
+			iprint("Setting "..dataNames[elementType].." to "..id)
 			setElementData(element, baseDataName, baseModel, not isClientFile)
 		end
 		

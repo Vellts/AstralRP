@@ -2,6 +2,7 @@ dgs = exports.dgs
 local sW, sY = dgs:dgsGetScreenSize()
 local font = dgs:dgsCreateFont("assets/fonts/Poppins-MediumItalic.ttf", 64)
 
+local isVisible = true
 svgs = {}
 
 function drawBadges()
@@ -166,3 +167,25 @@ function removeHud()
     end
 end
 
+function ShowHud()
+    local getElements = dgs:dgsGetElementsFromResource()
+    if (table.size(getElements) == 0) then
+        isVisible = not isVisible
+        return
+    end
+    for _, v in pairs(getElements) do
+        if (isElement(v)) then
+            if (dgs:dgsGetType(v) == "dgs-dximage") or (dgs:dgsGetType(v) == "dgs-dxlabel") then
+                dgs:dgsSetVisible(v, not isVisible)
+            end
+            -- dgs:dgsSetVisible(v, not isVisible)
+        end
+    end
+    isVisible = not isVisible
+end
+
+function table.size(t)
+    local count = 0
+    for _ in pairs(t) do count = count + 1 end
+    return count
+end

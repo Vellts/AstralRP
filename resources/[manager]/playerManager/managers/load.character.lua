@@ -30,11 +30,10 @@ local bodyparts = {
 }
 
 addEventHandler("onClientResourceStart", resourceRoot, function()
-    iprint(ids)
     for _, id in ipairs(ids) do
         for _, bodypart in ipairs(bodyparts[id]) do
             txd = engineLoadTXD(bodypart..".txd" )
-			iprint(engineImportTXD( txd, id ))
+			engineImportTXD( txd, id )
         end
 
         local skinName = (id == 14) and "assets/characters/maleskin/male" or "assets/characters/femaleskin/female"

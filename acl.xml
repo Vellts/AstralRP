@@ -24,6 +24,7 @@
         <object name="resource.webadmin"></object>
         <object name="resource.acpanel"></object>
         <object name="resource.newmodels"></object>
+        <object name="resource.test"></object>
     </group>
     <group name="Console">
         <acl name="Moderator"></acl>
@@ -34,6 +35,8 @@
         <object name="user.veltt"></object>
         <object name="resource.serverManager"></object>
         <object name="resource.newmodels"></object>
+        <object name="resource.assettify_library"></object>
+        <object name="resource.test"></object>
     </group>
     <group name="RPC">
         <acl name="RPC"></acl>
@@ -68,6 +71,8 @@
     <group name="autoGroup_assetify_library">
         <acl name="autoACL_assetify_library"></acl>
         <object name="resource.assetify_library"></object>
+        <object name="resource.test"></object>
+        <object name="resource.vehicle_loader"></object>
     </group>
     <acl name="Default">
         <right name="general.ModifyOtherObjects" access="false"></right>

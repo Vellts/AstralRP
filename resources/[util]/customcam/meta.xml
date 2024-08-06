@@ -1,0 +1,5 @@
+<meta>
+	<script src="customcam.lua" type="client" />
+	<info author="cuitu" name="customcam" description="change the camera position mainly for cinematic purposes" version="1.2.4" type="misc"/>
+</meta>
+  

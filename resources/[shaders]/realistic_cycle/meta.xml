@@ -1,0 +1,10 @@
+<meta>
+    <script src="cycle.lua" type="server" />
+    <script src="astronomic.lua" type="server" />
+    <script src="util.lua" type="server" />
+    <script src="settings.lua" type="server" />
+    <script src="events.lua" type="server" />
+    <settings>
+        <settings name="time_interval" value="[0.5]" />
+    </settings>
+</meta>

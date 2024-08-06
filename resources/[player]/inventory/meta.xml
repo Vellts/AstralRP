@@ -3,8 +3,10 @@
     <script src="items.lua" type="shared" />
     <!-- CLIENT -->
     <script src="client/items.lua" type="client"/>
+    <script src="client/binds.lua" type="client"/>
     <script src="client/menu.lua" type="client"/>
     <script src="client/wearable.lua" type="client"/>
+    <script src="server/fake_server.lua" type="client"/>
     <!-- ASSETS -->
     <file src="assets/sounds/menu_sound.mp3" />
     <file src="assets/sounds/menu_sound_2.mp3" />
@@ -23,4 +25,6 @@
     <file src="assets/icons/item_id_card.png" />
     <file src="assets/icons/item_pill.png" />
     <file src="assets/icons/item_hamburguer.png" />
+    <file src="assets/icons/item_shirt.png" />
+    <file src="assets/icons/item_pistol.png" />
 </meta>

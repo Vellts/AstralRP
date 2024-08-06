@@ -3,6 +3,7 @@ local screenW, screenH = guiGetScreenSize()
 local boundingElements = false
 local colorVehicle = tocolor(255, 255, 255)
 local colorPlayer = tocolor(0, 255, 0)
+local vehicleGetName = {}
 
 function getPositionFromElementOffset(element,offX,offY,offZ)
     local m = getElementMatrix ( element )  -- Get the matrix
@@ -93,9 +94,18 @@ function drawVehicleContent(element)
     local x2, y2, z2 = getPositionFromElementOffset(element, maxX, minY, maxZ)
     dxDrawLine3D(x1, y1, z1, x2, y2, z2, colorVehicle, width)
 
-    local id = getElementModel(element)
-    local name = getVehicleNameFromModel(id) or "Unknown"
-    dxDrawTextOnElement(element, "["..id.."] "..name, 1, 40, 255, 255, 255, 255, 3, "default-bold")
+    -- local id = getElementModel(element)
+    -- local name = getVehicleNameFromModel(id) or "Unknown"
+    -- iprint(id)
+    -- local vehicleName = exports["newmodels"]:getModDataFromID(id)
+    if (not vehicleGetName[element]) then
+        local id = getElementData(element, "vehicleID") or 0
+        local vehicleData = exports["newmodels"]:getModDataFromID(id)
+        -- iprint(id)
+        vehicleGetName[element] = {name = vehicleData.name, id = id}
+        iprint(":D")
+    end
+    dxDrawTextOnElement(element, "["..vehicleGetName[element].id.."] "..vehicleGetName[element].name, 1, 40, 255, 255, 255, 255, 3, "default-bold")
 end
 
 function drawPlayerContent(element)

@@ -1,4 +1,8 @@
 <meta>
     <script src="test_c.lua" type ="client" />
     <script src="test_s.lua" type ="server" />
+    <file src="copcarru.txd"/>
+    <file src="copcarru.dff"/>
+    <file src="copcarvg.txd"/>
+    <file src="copcarvg.dff"/>
 </meta>

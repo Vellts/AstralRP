@@ -828,7 +828,6 @@ function addExternalMod_IDFilenames(...)
 			sendModListAllPlayers("addExternalMod_IDFilenames")
 		end
 	end, SEND_DELAY, 1)
-
 	return true
 end
 

@@ -1,6 +1,3 @@
-
--- loadstring(exports.assetify_library:import("threader"))()
-
 function RenderIconItems(parent)
     if (table.size(Items_dgs.slots) == 0) then
         return
@@ -9,7 +6,7 @@ function RenderIconItems(parent)
     for _, item in pairs(items) do
         for _, slot in pairs(Items_dgs.slots) do
             if (slot.id == item.slotId) then
-                local icon = Dgs:dgsCreateImage(0.25, 0.28, 0.5, 0.4, "assets/icons/item_"..item.image, true, slot.itemImage)
+                local icon = Dgs:dgsCreateImage(0.25, 0.28, 0.5, 0.5, "assets/icons/item_"..item.image, true, slot.itemImage)
                 slot.icon = icon
                 slot.item = item
 
@@ -18,12 +15,55 @@ function RenderIconItems(parent)
                 local stackLabel = Dgs:dgsCreateLabel(0.1, 0.05, 0.5, 0.2, tostring(stack), true, slot.itemImage)
                 Dgs:dgsSetProperty(stackLabel, "textColor", tocolor(159, 159, 159, 255))
                 Dgs:dgsSetProperty(stackLabel, "font", "default-bold")
-
+                Dgs:dgsSetPostGUI(icon, false)
+                Dgs:dgsSetLayer(icon, "bottom")
 
                 slot.stackLabel = stackLabel
+
+                -- addEventHandler("onDgsMouseEnter", icon, function()
+                --     if (source ~= icon) then return end
+                --     local itemData = Items_dgs.slots[slot.itemImage]
+                --     PopupItems(true, itemData)
+                --     -- ChangeSlotColor(slot.itemImage, tocolor(109, 120, 230, 200))
+                --     ChangeSlotColor(slot.itemImage, tocolor(13, 19, 99, 100))
+
+                -- end, false)
+
+                -- addEventHandler("onDgsMouseLeave", icon, function()
+                --     if (source ~= icon) then return end
+                --     PopupItems(false)
+                --     ChangeSlotColor(slot.itemImage, tocolor(31, 27, 27, 245))
+                -- end, false)
+
+                -- AddDragNDropEvent(slot.itemImage, icon)
             end
         end
     end
+end
+
+function AddDragNDropEvent(elm, rot)
+    addEventHandler("onDgsDrag", rot, function()
+        local itemData = Items_dgs.slots[elm]
+        if (table.size(itemData.item) == 0) then
+            return
+        end
+        CreteNewIconSlot(elm, itemData, false)
+        Dgs:dgsSendDragNDropData({
+            item = itemData.item,
+            id = itemData.id,
+            key = elm
+        }, itemData.iconTexture, nil, 0, 0, 40, 20)
+    end, false)
+
+    addEventHandler("onDgsDrop", rot, function(data)
+        local oldSlot = data
+        local newSlot = Items_dgs.slots[elm]
+        local slotStatus = AddDataToNewSlot(oldSlot, newSlot)
+        if (not slotStatus) then
+            return
+        end
+        CreteNewIconSlot(elm, newSlot, true)
+    end, false)
 end
 
 function RenderGridItems(parent)
@@ -62,6 +102,8 @@ function RenderMiniGridItems(parent)
                 font = "default-bold"
             })
 
+            Items_dgs.shaders[itemImage] = itemRect
+
             Items_dgs.mini_menu.slots[itemImage] = {
                 item = {},
                 itemImage = itemImage,
@@ -97,7 +139,7 @@ function RenderMenuItems(parent)
 
     -- IMAGE --
     local image = Dgs:dgsCreateImage(x, y, w, h, blur, false, parent)
-
+    Dgs:dgsSetProperty(image, "changeOrder", false)
     -- IMAGE DELETE CONFIG --
     Dgs:dgsAttachToAutoDestroy(circleShader, image)
     Dgs:dgsAttachToAutoDestroy(blur, image)
@@ -198,40 +240,131 @@ function UpdateMiniMenuItemsIcon()
     end
 end
 
-function AddDataToNewSlot(oldSlot, newSlot)
-    for _, slot in pairs(Items_dgs.slots) do
-        if (slot.id == oldSlot.id) then
-            if (table.size(newSlot.item) ~= 0) then
-                return false
-            end
-            iprint("a", newSlot.item)
-            if (isElement(slot.icon)) then
-                destroyElement(slot.icon)
-                slot.icon = nil
-                newSlot.item = slot.item
-                slot.item = {}
-                UpdateMiniMenuItemsIcon()
-            end
-            if (isElement(slot.iconTexture)) then
-                destroyElement(slot.iconTexture)
-                slot.iconTexture = nil
-            end
-            if (isElement(slot.stackLabel)) then
-                destroyElement(slot.stackLabel)
-                slot.stackLabel = nil
+function AddDataToNewSlot(oldSlot, newSlot, isDress)
+    if (isDress) then
+        -- iprint(newSlot)
+        -- if true then return end
+        if (table.size(newSlot.item) ~= 0) then
+            return false
+        end
+        if (oldSlot.item.subcategory ~= newSlot.subcategory) then
+            return false
+        end
+
+        local oldItem = Items_dgs.slots[oldSlot.key]
+
+        if (isElement(oldItem.icon)) then
+            destroyElement(oldItem.icon)
+            oldItem.icon = nil
+            newSlot.item = oldItem.item
+            oldItem.item = {}
+            UpdateMiniMenuItemsIcon()
+        end
+
+        if (isElement(oldItem.iconTexture)) then
+            destroyElement(oldItem.iconTexture)
+            oldItem.iconTexture = nil
+        end
+
+        if (isElement(oldItem.stackLabel)) then
+            -- iprint("destroying stack")
+            destroyElement(oldItem.stackLabel)
+            oldItem.stackLabel = nil
+        end
+        return true
+    end
+
+    if (table.size(newSlot.item) ~= 0) then
+        return false
+    end
+
+    local oldItem = Items_dgs.slots[oldSlot.key]
+    if (not oldItem) then
+        oldItem = Items_dgs.dress[oldSlot.key]
+        if (not oldItem) then return end
+    end
+
+    if (isElement(oldItem.icon)) then
+        -- iprint(oldItem.icon)
+        if (oldItem.item.category == "dress") then
+            if (isElement(oldItem.icon_bg)) then
+                Dgs:dgsAlphaTo(oldItem.icon_bg, 1, "Linear", 100)
+                setPedAnimation(localPlayer, "shop", "rob_shifty", -1, false, false, false, false)
+                setTimer(function()
+                    setPedAnimationProgress(localPlayer, "rob_shifty", 0.5)
+                end, 50, 1)
+                setTimer(function()
+                    exports.playerManager:setPlayerClothe(localPlayer, getElementModel(localPlayer), {
+                        skin = getElementModel(localPlayer),
+                        camisa = { 0, 0 },
+                    })
+                end, 1000, 1)
             end
         end
+        destroyElement(oldItem.icon)
+        oldItem.icon = nil
+        newSlot.item = oldItem.item
+        oldItem.item = {}
+        UpdateMiniMenuItemsIcon()
+    end
+
+    if (isElement(oldItem.iconTexture)) then
+        destroyElement(oldItem.iconTexture)
+        oldItem.iconTexture = nil
+    end
+
+    if (isElement(oldItem.stackLabel)) then
+        destroyElement(oldItem.stackLabel)
+        oldItem.stackLabel = nil
     end
     return true
 end
 
-function CreteNewIconSlot(itemImage, newSlot, needIcon)
+function CreteNewIconSlot(itemImage, newSlot, needIcon, isDress)
+    if (isDress) then
+        -- iprint(newSlot)
+        if (table.size(newSlot.item) == 0) then
+            return
+        end
+        if (not newSlot.iconTexture) then
+            if (isElement(newSlot.icon)) then
+                newSlot.iconTexture = dxCreateTexture("assets/icons/item_"..newSlot.item.image)
+            end
+
+            if (needIcon) then
+                -- set the icon to alpha 0
+                if (isElement(newSlot.icon_bg)) then
+                    Dgs:dgsSetAlpha(newSlot.icon_bg, 0)
+                end
+                -- set the new icon
+                newSlot.icon = Dgs:dgsCreateImage(0.27, 0.3, 0.45, 0.4, "assets/icons/item_"..newSlot.item.image, true, itemImage)
+                -- AddDragNDropEvent(itemImage, newSlot.icon)
+                
+                -- iprint(newSlot.icon)
+                -- animacion de vestir al jugador
+                -- setPedAnimation(localPlayer, "carry", "putdwn105", -1, false, false, false, false)
+                setPedAnimation(localPlayer, "shop", "rob_shifty", -1, false, false, false, false)
+                setTimer(function()
+                    setPedAnimationProgress(localPlayer, "rob_shifty", 0.5)
+                end, 50, 1)
+                setTimer(function()
+                    exports.playerManager:setPlayerClothe(localPlayer, getElementModel(localPlayer), {
+                        skin = getElementModel(localPlayer),
+                        camisa = { 1, 1},
+                        perna = { 1, 1 }
+                    })
+                end, 1000, 1)
+            end
+        end
+        return true
+    end
     if (not newSlot.iconTexture) then
         if (isElement(newSlot.icon)) then
             newSlot.iconTexture = dxCreateTexture("assets/icons/item_"..newSlot.item.image)
         end
     end
-    if (not newSlot.stackLabel) then
+    
+    if (not newSlot.stackLabel) and (not newSlot.subcategory) then
         local stack = newSlot.item.stack
         local stackLabel = Dgs:dgsCreateLabel(0.1, 0.05, 0.5, 0.2, tostring(stack), true, itemImage)
         Dgs:dgsSetProperty(stackLabel, "textColor", tocolor(159, 159, 159, 255))
@@ -240,8 +373,10 @@ function CreteNewIconSlot(itemImage, newSlot, needIcon)
     end
     if (needIcon) then
         newSlot.icon = Dgs:dgsCreateImage(0.25, 0.28, 0.5, 0.4, "assets/icons/item_"..newSlot.item.image, true, itemImage)
+        -- AddDragNDropEvent(itemImage, newSlot.icon)
         playSound("assets/sounds/menu_sound_2.mp3")
     end
+    
 end
 
 function GenerateRespSlots(w, h, parent, row, column, needShadow, isVertical, ...)
@@ -269,6 +404,7 @@ function GenerateRespSlots(w, h, parent, row, column, needShadow, isVertical, ..
                 if (needShadow) then
                     local itemRectShadow = Dgs:dgsCreateRoundRect(6, false, tocolor(255, 255, 255, 50))
                     local itemShadow = Dgs:dgsCreateImage(x1 - (w1 * 0.02), y1 - (h1 * 0.02), w1 + (w1 * 0.04), h1 + (h1 * 0.04), itemRectShadow, false, parent)
+                    Dgs:dgsSetProperty(itemShadow, "changeOrder", false)
                     Dgs:dgsAttachToAutoDestroy(itemRectShadow, itemShadow)
                 end
                 -- Render item
@@ -291,51 +427,53 @@ function GenerateRespSlots(w, h, parent, row, column, needShadow, isVertical, ..
                     icon = nil,
                     id = itemId,
                     iconTexture = nil,
-                    stackLabel = nil
+                    stackLabel = nil,
                 }
 
-                addEventHandler("onDgsDrag",itemImage,function(data)
-                    local itemData = Items_dgs.slots[itemImage]
+                -- addEventHandler("onDgsDrag",itemImage,function(data)
+                --     local itemData = Items_dgs.slots[itemImage]
 
-                    if (table.size(itemData.item) == 0) then
-                        return
-                    end
+                --     if (table.size(itemData.item) == 0) then
+                --         return
+                --     end
 
-                    CreteNewIconSlot(itemImage, itemData, false)
+                --     CreteNewIconSlot(itemImage, itemData, false)
 
-                    Dgs:dgsSendDragNDropData({
-                        item = itemData.item,
-                        id = itemData.id,
-                    }, itemData.iconTexture, nil, 0, 0, 40, 20)
+                --     Dgs:dgsSendDragNDropData({
+                --         item = itemData.item,
+                --         id = itemData.id,
+                --         key = itemImage
+                --     }, itemData.iconTexture, nil, 0, 0, 40, 20)
 
-                end,false)
+                -- end,false)
 
-                addEventHandler("onDgsDrop",itemImage,function(data)
-                    local oldSlot = data
-                    local newSlot = Items_dgs.slots[itemImage]
-                    
-                    -- delete the icon in the actual slot
-                    local slotStatus = AddDataToNewSlot(oldSlot, newSlot)
-                    if (not slotStatus) then
-                        return
-                    end
-                    -- create the icon in the new slot
-                    CreteNewIconSlot(itemImage, newSlot, true)
-                end,false)
+                -- addEventHandler("onDgsDrop",itemImage,function(data)
+                --     local oldSlot = data
+                --     local newSlot = Items_dgs.slots[itemImage]
+                --     -- iprint("aki2")
+                --     -- iprint(oldSlot)
+                --     -- delete the icon in the actual slot
+                --     local slotStatus = AddDataToNewSlot(oldSlot, newSlot)
+                --     if (not slotStatus) then
+                --         return
+                --     end
+                --     -- create the icon in the new slot
+                --     CreteNewIconSlot(itemImage, newSlot, true)
+                -- end,false)
 
                 
 
-                addEventHandler("onDgsMouseLeave", itemImage, function()
-                    if (source ~= itemImage) then return end
-                    PopupItems(false)
-                    ChangeSlotColor(itemImage, tocolor(31, 27, 27, 245))
-                end, false)
-                addEventHandler("onDgsMouseEnter", itemImage, function()
-                    if (source ~= itemImage) then return end
-                    local itemData = Items_dgs.slots[itemImage]
-                    PopupItems(true, itemData)
-                    ChangeSlotColor(itemImage, tocolor(13, 19, 99, 100))
-                end, false)
+                -- addEventHandler("onDgsMouseLeave", itemImage, function()
+                --     if (source ~= itemImage) then return end
+                --     PopupItems(false)
+                --     ChangeSlotColor(itemImage, tocolor(31, 27, 27, 245))
+                -- end, false)
+                -- addEventHandler("onDgsMouseEnter", itemImage, function()
+                --     if (source ~= itemImage) then return end
+                --     local itemData = Items_dgs.slots[itemImage]
+                --     PopupItems(true, itemData)
+                --     ChangeSlotColor(itemImage, tocolor(13, 19, 99, 100))
+                -- end, false)
             end
         end
     else
@@ -367,22 +505,75 @@ function GenerateRespSlots(w, h, parent, row, column, needShadow, isVertical, ..
                 local h1 = itemHeight
 
                 local itemImage = Dgs:dgsCreateImage(x1, y1, w1, h1, (isElement(blur) and blur or itemRect), false, parent)
+                Items_dgs.dress[itemImage] = {
+                    item = {},
+                    itemImage = itemImage,
+                    icon = nil,
+                    id = itemId,
+                    iconTexture = nil,
+                    stackLabel = nil,
+                }
                 if (table.size(args.icons) > 1) then
                     for k, _ in pairs(args.icons) do
                         -- iprint(k, v)
                         if (not args.icons[k]) then
                             local iconPath = "assets/icons/"..k..".png"
-                            Dgs:dgsCreateImage(0.27, 0.3, 0.45, 0.4, iconPath, true, itemImage)
+                            Items_dgs.dress[itemImage].icon_bg = Dgs:dgsCreateImage(0.27, 0.3, 0.45, 0.4, iconPath, true, itemImage)
                             args.icons[k] = true
+                            Items_dgs.dress[itemImage].subcategory = k
                             break
                         end
                     end
                 end
 
+                Items_dgs.shaders[itemImage] = itemRect
+
+                
+
                 Dgs:dgsAttachToAutoDestroy(itemRect, itemImage)
                 if (isElement(blur)) then
                     Dgs:dgsAttachToAutoDestroy(blur, itemImage)
                 end
+
+                -- EVENTS --
+                -- addEventHandler("onDgsDrag",itemImage,function(data)
+                --     local itemData = Items_dgs.dress[itemImage]
+
+                --     if (table.size(itemData.item) == 0) then
+                --         return
+                --     end
+
+                --     CreteNewIconSlot(itemImage, itemData, false)
+
+                --     Dgs:dgsSendDragNDropData({
+                --         item = itemData.item,
+                --         id = itemData.id,
+                --         key = itemImage
+                --     }, itemData.iconTexture, nil, 0, 0, 40, 20)
+
+                -- end,false)
+                -- addEventHandler("onDgsDrop", itemImage, function(data)
+                --     local oldSlot = data
+                --     local newSlot = Items_dgs.dress[itemImage]
+                --     if (oldSlot.item.category ~= "dress") then return end
+                --     -- iprint("aki")
+                --     local slotStatus = AddDataToNewSlot(oldSlot, newSlot, true)
+                --     if (not slotStatus) then
+                --         return
+                --     end
+                --     -- create the icon in the new slot
+                --     CreteNewIconSlot(itemImage, newSlot, true, true)
+                -- end)
+
+                -- addEventHandler("onDgsMouseEnter", itemImage, function()
+                --     if (source ~= itemImage) then return end
+                --     ChangeSlotColor(itemImage, tocolor(109, 120, 230, 200))
+                -- end, false)
+
+                -- addEventHandler("onDgsMouseLeave", itemImage, function()
+                --     if (source ~= itemImage) then return end
+                --     ChangeSlotColor(itemImage, tocolor(60, 70, 70, 245))
+                -- end, false)
             end
         end
     end
@@ -401,9 +592,6 @@ function PopupItems(state, itemData)
         Dgs:dgsBlurBoxSetIntensity(blur, 5)
         Dgs:dgsBlurBoxSetLevel(blur, 15)
         Items_dgs.popup.parent = Dgs:dgsCreateImage(x, y, w, h, blur, false, Items_dgs.background)
-        -- local stackLabel = Dgs:dgsCreateLabel(0.1, 0.05, 0.5, 0.2, tostring(stack), true, slot.itemImage)
-        -- Dgs:dgsSetProperty(stackLabel, "textColor", tocolor(159, 159, 159, 255))
-        -- Dgs:dgsSetProperty(stackLabel, "font", "default-bold")
         local itemSelected = "Identificación"
         Items_dgs.popup.labelTitle = Dgs:dgsCreateLabel(0.04, 0.1, 0.8, 0.2, "#9F9F9FItem seleccionado: #99AFDD"..itemSelected, true, Items_dgs.popup.parent)
         Dgs:dgsSetProperties(Items_dgs.popup.labelTitle, {
@@ -464,3 +652,84 @@ function table.size(tab)
     for _ in pairs(tab) do length = length + 1 end
     return length
 end
+
+function GetItemData(elm, type)
+    local items = {}
+    if (type == "slots") then
+        if (not Items_dgs.slots[elm]) and (not Items_dgs.slots[Dgs:dgsGetParent(elm)]) then return end
+
+        local itemData = Items_dgs.slots[source] or Items_dgs.slots[Dgs:dgsGetParent(source)]
+        items = itemData
+    elseif (type == "dress") then
+        if (not Items_dgs.dress[elm]) and (not Items_dgs.dress[Dgs:dgsGetParent(elm)]) then return end
+
+        local itemData = Items_dgs.dress[source] or Items_dgs.dress[Dgs:dgsGetParent(source)]
+        items = itemData
+    end
+    return table.size(items) > 0 and items or nil
+end
+
+addEventHandler("onDgsMouseEnter", root, function()
+    local itemDataSlots = GetItemData(source, "slots")
+    if (itemDataSlots) then
+        PopupItems(true, itemDataSlots)
+        ChangeSlotColor(itemDataSlots.itemImage, tocolor(13, 19, 99, 100))
+    else
+        local itemDataDress = GetItemData(source, "dress")
+        if (itemDataDress) then
+            ChangeSlotColor(itemDataDress.itemImage, tocolor(109, 120, 230, 200))
+        end
+    end
+end)
+
+addEventHandler("onDgsMouseLeave", root, function()
+    local itemDataSlots = GetItemData(source, "slots")
+    if (itemDataSlots) then
+        PopupItems(false)
+        ChangeSlotColor(itemDataSlots.itemImage, tocolor(31, 27, 27, 245))
+    else
+        local itemDataDress = GetItemData(source, "dress")
+        if (itemDataDress) then
+            ChangeSlotColor(itemDataDress.itemImage, tocolor(60, 70, 70, 245))
+        end
+    end
+end)
+
+addEventHandler("onDgsDrag", root, function ()
+    local itemDataSlots = GetItemData(source, "slots")
+    if (itemDataSlots) then
+        if (table.size(itemDataSlots.item) == 0) then return end
+        CreteNewIconSlot(itemDataSlots.itemImage, itemDataSlots, false)
+        Dgs:dgsSendDragNDropData({
+            item = itemDataSlots.item,
+            id = itemDataSlots.id,
+            key = itemDataSlots.itemImage
+        }, itemDataSlots.iconTexture, nil, 0, 0, 40, 20)
+    else
+        local itemDataDress = GetItemData(source, "dress")
+        if (itemDataDress) then
+            if (table.size(itemDataDress.item) == 0) then return end
+            CreteNewIconSlot(itemDataDress.itemImage, itemDataDress, false, true)
+            Dgs:dgsSendDragNDropData({
+                item = itemDataDress.item,
+                id = itemDataDress.id,
+                key = itemDataDress.itemImage
+            }, itemDataDress.iconTexture, nil, 0, 0, 40, 20)
+        end
+    end
+end)
+
+addEventHandler("onDgsDrop", root, function(data)
+    local oldSlot = data
+    local newSlot = GetItemData(source, "slots") or GetItemData(source, "dress")
+    -- iprint(1, newSlot)
+    if (not newSlot) then return end
+    local isDressSlot = (newSlot.subcategory) and true or false
+    local slotStatus = AddDataToNewSlot(oldSlot, newSlot, isDressSlot)
+    if (not slotStatus) then return end
+
+    -- if the new slot has subcategory, then set to true
+
+    -- iprint(isDressSlot)
+    CreteNewIconSlot(newSlot.itemImage, newSlot, true, isDressSlot)
+end)

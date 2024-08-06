@@ -1,5 +1,6 @@
 local priorityResources = {
     "dgs",
+    "assetify_library",
     "loadingScreen",
     "databaseManager",
     "playerManager",
@@ -14,11 +15,19 @@ local resourcesFolder = {
     "core_vehicle",
     "newmodels",
     "newmodels-engine",
+    "vehicle_loader",
     "vehicle_damage",
     "elements_interactions",
     "dev_info",
     "gps",
     "admin",
+    -- "inventory",
+    "realistic_nights",
+    "dynamic_lighting_vehicles",
+    "mapa",
+    "Mapa-LS",
+    "Mapa2",
+    "mapa3"
 }
 
 local function loadResources()

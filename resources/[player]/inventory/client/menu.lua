@@ -6,6 +6,7 @@ Items_dgs = {
         slots = {},
         main = nil
     },
+    dress = {},
     items = {},
     slots = {},
     popup = {},

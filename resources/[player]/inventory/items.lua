@@ -46,5 +46,34 @@ Items = {
         image = "hamburguer.png",
         slotId = 10,
         stack = 3
+    },
+    [5] = {
+        name = "shirt",
+        category = "dress",
+        subcategory = "shirt",
+        label = "Camisa Adidas",
+        description = "Una prenda personalizada. Puede ser colocada en el torso.",
+        weight = 4,
+        stackeable = false,
+        consumable = false,
+        image = "shirt.png",
+        slotId = 11,
+        stack = 1
+    },
+    [6] = {
+        name = "pistol",
+        category = "weapons",
+        label = "Pistola 9mm",
+        description = "Una pistola de 9mm con capacidad de 15 balas.",
+        weight = 4,
+        stackeable = false,
+        consumable = false,
+        image = "pistol.png",
+        slotId = 3,
+        stack = 1,
+        action = {
+            weapon_id = 22,
+            ammo = 15
+        }
     }
 }

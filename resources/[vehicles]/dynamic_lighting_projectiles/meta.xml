@@ -1,0 +1,9 @@
+<meta>
+	<info name="Dynamic Lighting - Projectiles" author="Ren712" version="1.0.5" type="script" />
+	<min_mta_version>client="1.5.2-9.07903"</min_mta_version>
+	
+	<script src="c_projectileLight.luac" type="client" />
+	
+	<include resource="dynamic_lighting" />
+	
+</meta>

@@ -6,8 +6,8 @@
     <script src="hud/vehicle.lua" type="shared"></script>
     <script src="hud/mainC.lua" type="client"></script>
     <script src="hud/mainS.lua" type="server"></script>
-    <script src="core/vehicleS.lua" type="server"></script>
     <script src="core/vehicleC.lua" type="client"></script>
+    <script src="core/vehicleS.lua" type="server"></script>
 
     <!--  FONTS  -->
 
