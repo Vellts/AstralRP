@@ -22,7 +22,7 @@ local resourcesFolder = {
     "gps",
     "admin",
     -- "inventory",
-    "realistic_nights",
+    "realistic_cycle",
     "dynamic_lighting_vehicles",
     "mapa",
     "Mapa-LS",

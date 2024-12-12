@@ -1,12 +1,12 @@
 local intensidad = 800
-Time_Astronomic_Interval = 1000 * 60 * 2
+Time_Astronomic_Interval = 1000 * 60 * 40
 
 --- Cosas a tomar en cuenta:
 -- setWindVelocity
 -- setWeatherBlended / getWeather
 -- setRainLevel
 
-
+ 
 --[[
     Esta función se encarga de inicializar el ciclo de tiempo.
     Se encarga de obtener la última hora registrada en un archivo xml.
@@ -14,12 +14,13 @@ Time_Astronomic_Interval = 1000 * 60 * 2
 ]]
 ---@return nil
 function InitCycle()
-    --@TODO: Obtener ultima hora registrada en un xml
-    local last_hour_saved = 12
-    local last_minute_saved = 43
+    --Obtener ultima hora registrada en un xml
+
+    local last_hour_saved, last_minute_saved, last_event_cycle = LoadXml()
+    -- iprint(last_hour_saved, last_minute_saved, last_event_cycle)
     setTime(last_hour_saved, last_minute_saved)
     SetWorldTime()
-    setWeather(1)
+    setWeather(last_event_cycle)
     setTimer(SetBasicAstronomicEvent, Time_Astronomic_Interval, 0)
 end
 
@@ -28,11 +29,11 @@ end
 ]]
 ---@return nil
 function SetWorldTime()
-    local interval = get("time_interval") or 1000
+    local interval = get("time_interval") or 1
     setTimer(function()
         local hour, minute = getTime()
         setTime(hour, minute + 1)
-    end, interval, 0)
+    end, (1000 * 60 * interval), 0)
 end
 
 --[[
@@ -71,4 +72,10 @@ addEventHandler("onResourceStart", resourceRoot, InitCycle)
 
 addCommandHandler("sweather", function(player, cmd, weather)
     setWeatherBlended(tonumber(weather))
+end)
+
+addEventHandler("onResourceStop", resourceRoot, function()
+    local hour, minute = getTime()
+    local event_cycle = getWeather()
+    SaveXml(hour, minute, event_cycle)
 end)

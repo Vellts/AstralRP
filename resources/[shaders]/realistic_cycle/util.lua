@@ -7,7 +7,7 @@
 function Clr(a, time)
     return (a - (a*(time-20)/3))
 end
-
+ 
 --[[
     Esta es otra función se encarga de transformar los valores para el cielo.
 ]]

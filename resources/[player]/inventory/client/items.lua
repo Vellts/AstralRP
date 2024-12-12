@@ -241,6 +241,8 @@ function UpdateMiniMenuItemsIcon()
 end
 
 function AddDataToNewSlot(oldSlot, newSlot, isDress)
+    -- iprint(newSlot)
+    if (oldSlot.id == newSlot.id) then return false end
     if (isDress) then
         -- iprint(newSlot)
         -- if true then return end
@@ -273,51 +275,84 @@ function AddDataToNewSlot(oldSlot, newSlot, isDress)
         end
         return true
     end
-
+    -- iprint(newSlot.item)
     if (table.size(newSlot.item) ~= 0) then
-        return false
-    end
+        -- iprint(1, newSlot)
+        if (newSlot.item.stackeable) and (oldSlot.item.stackeable) then
+            if (oldSlot.item.name ~= newSlot.item.name) then return false end
+            local oldItem = Items_dgs.slots[oldSlot.key]
 
-    local oldItem = Items_dgs.slots[oldSlot.key]
-    if (not oldItem) then
-        oldItem = Items_dgs.dress[oldSlot.key]
-        if (not oldItem) then return end
-    end
-
-    if (isElement(oldItem.icon)) then
-        -- iprint(oldItem.icon)
-        if (oldItem.item.category == "dress") then
-            if (isElement(oldItem.icon_bg)) then
-                Dgs:dgsAlphaTo(oldItem.icon_bg, 1, "Linear", 100)
-                setPedAnimation(localPlayer, "shop", "rob_shifty", -1, false, false, false, false)
-                setTimer(function()
-                    setPedAnimationProgress(localPlayer, "rob_shifty", 0.5)
-                end, 50, 1)
-                setTimer(function()
-                    exports.playerManager:setPlayerClothe(localPlayer, getElementModel(localPlayer), {
-                        skin = getElementModel(localPlayer),
-                        camisa = { 0, 0 },
-                    })
-                end, 1000, 1)
+            if (isElement(oldItem.icon)) then
+                -- iprint("deleting icon")
+                destroyElement(oldItem.icon)
+                oldItem.icon = nil
             end
+            if (isElement(newSlot.icon)) then
+                -- iprint("deleting icon")
+                destroyElement(newSlot.icon)
+            end
+            if (isElement(oldItem.iconTexture)) then
+                destroyElement(oldItem.iconTexture)
+                oldItem.iconTexture = nil
+            end
+            if (isElement(oldItem.stackLabel)) then
+                destroyElement(oldItem.stackLabel)
+                oldItem.stackLabel = nil
+            end
+            newSlot.item.stack = newSlot.item.stack + oldItem.item.stack
+            oldItem.item = {}
+            -- iprint(newSlot)
+            UpdateMiniMenuItemsIcon()
+            -- iprint(oldItem)
+            return true
         end
-        destroyElement(oldItem.icon)
-        oldItem.icon = nil
-        newSlot.item = oldItem.item
-        oldItem.item = {}
-        UpdateMiniMenuItemsIcon()
-    end
+        return false
+    else
+        local oldItem = Items_dgs.slots[oldSlot.key]
+        if (not oldItem) then
+            oldItem = Items_dgs.dress[oldSlot.key]
+            if (not oldItem) then return false end
+        end
+    
+        if (isElement(oldItem.icon)) then
+            -- iprint(oldItem.icon)
+            if (oldItem.item.category == "dress") then
+                if (isElement(oldItem.icon_bg)) then
+                    Dgs:dgsAlphaTo(oldItem.icon_bg, 1, "Linear", 100)
+                    setPedAnimation(localPlayer, "shop", "rob_shifty", -1, false, false, false, false)
+                    setTimer(function()
+                        setPedAnimationProgress(localPlayer, "rob_shifty", 0.5)
+                    end, 50, 1)
+                    setTimer(function()
+                        exports.playerManager:setPlayerClothe(localPlayer, getElementModel(localPlayer), {
+                            skin = getElementModel(localPlayer),
+                            camisa = { 0, 0 },
+                        })
+                    end, 1000, 1)
+                end
+            end
+            destroyElement(oldItem.icon)
+            oldItem.icon = nil
+            newSlot.item = oldItem.item
+            oldItem.item = {}
+            UpdateMiniMenuItemsIcon()
+        end
+    
+        if (isElement(oldItem.iconTexture)) then
+            destroyElement(oldItem.iconTexture)
+            oldItem.iconTexture = nil
+        end
+    
+        if (isElement(oldItem.stackLabel)) then
+            destroyElement(oldItem.stackLabel)
+            oldItem.stackLabel = nil
+        end
+        -- iprint(oldItem)
 
-    if (isElement(oldItem.iconTexture)) then
-        destroyElement(oldItem.iconTexture)
-        oldItem.iconTexture = nil
+        return true
     end
-
-    if (isElement(oldItem.stackLabel)) then
-        destroyElement(oldItem.stackLabel)
-        oldItem.stackLabel = nil
-    end
-    return true
+    -- iprint(newSlot.item.category, oldSlot.item.category)
+    return false
 end
 
 function CreteNewIconSlot(itemImage, newSlot, needIcon, isDress)
@@ -370,9 +405,11 @@ function CreteNewIconSlot(itemImage, newSlot, needIcon, isDress)
         Dgs:dgsSetProperty(stackLabel, "textColor", tocolor(159, 159, 159, 255))
         Dgs:dgsSetProperty(stackLabel, "font", "default-bold")
         newSlot.stackLabel = stackLabel
+    elseif (newSlot.stackLabel) then
+        Dgs:dgsSetText(newSlot.stackLabel, tostring(newSlot.item.stack))
     end
     if (needIcon) then
-        newSlot.icon = Dgs:dgsCreateImage(0.25, 0.28, 0.5, 0.4, "assets/icons/item_"..newSlot.item.image, true, itemImage)
+        newSlot.icon = Dgs:dgsCreateImage(0.25, 0.28, 0.5, 0.5, "assets/icons/item_"..newSlot.item.image, true, itemImage)
         -- AddDragNDropEvent(itemImage, newSlot.icon)
         playSound("assets/sounds/menu_sound_2.mp3")
     end

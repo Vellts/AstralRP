@@ -25,6 +25,7 @@
         <object name="resource.acpanel"></object>
         <object name="resource.newmodels"></object>
         <object name="resource.test"></object>
+        <object name="resource.awrp_animacao"></object>
     </group>
     <group name="Console">
         <acl name="Moderator"></acl>

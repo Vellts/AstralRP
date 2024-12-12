@@ -11,7 +11,7 @@ function loadXml()
     xmlUnloadFile(xml)
     return status, name
 end
-
+ 
 function saveXml(username, checkStatus)
     local xml = xmlLoadFile("username.xml")
     if (not xml) then

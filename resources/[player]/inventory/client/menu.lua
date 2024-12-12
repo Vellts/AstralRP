@@ -102,9 +102,6 @@ local function renderMenu(parent)
 end
 
 function RenderInventory(render)
-    if (isPedInVehicle(localPlayer)) then
-        return
-    end
     if (render) then
         showCursor(true)
         if (not Items_dgs.background) then
@@ -149,6 +146,7 @@ end)
 
 function RenderMiniInventory(render, time)
     if (render) then
+        if (isPedInVehicle(localPlayer)) then return end
         if (not isElement(Items_dgs.mini_menu.main)) then
             RenderMiniMenuItems()
             return
@@ -167,3 +165,11 @@ function RenderMiniInventory(render, time)
     end
 end
 RenderMiniInventory(true)
+
+addEventHandler("onClientVehicleEnter", root, function()
+    RenderMiniInventory(false, 500)
+end)
+
+addEventHandler("onClientVehicleExit", root, function()
+    RenderMiniInventory(true, 500)
+end)
